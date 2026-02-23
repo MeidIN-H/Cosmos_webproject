@@ -1,0 +1,355 @@
+ <!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset ="utf-8">
+        <title> 
+            Space step!
+        </title>
+
+            <!-- В head добавляем спрайты планет (упрощённые SVG) -->
+<svg style="display: none;">
+    <!-- Меркурий -->
+    <symbol id="mercury" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="45" fill="#8c7853"/>
+        <circle cx="35" cy="35" r="8" fill="#a58b6b"/>
+        <circle cx="65" cy="60" r="12" fill="#6b5e4a"/>
+    </symbol>
+    
+    <!-- Венера -->
+    <symbol id="venus" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="45" fill="#e6b800"/>
+        <ellipse cx="50" cy="40" rx="25" ry="15" fill="#cc9c00"/>
+        <circle cx="30" cy="60" r="8" fill="#b38600"/>
+    </symbol>
+    
+    <!-- Земля -->
+    <symbol id="earth" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="45" fill="#2e86c1"/>
+        <path d="M25 40 Q40 30, 55 35 Q70 40, 75 55 Q70 70, 50 70 Q30 70, 25 50 Z" fill="#27ae60"/>
+        <circle cx="60" cy="45" r="5" fill="#f1c40f"/>
+    </symbol>
+    
+    <!-- Марс -->
+    <symbol id="mars" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="45" fill="#c44c4c"/>
+        <ellipse cx="40" cy="40" rx="15" ry="10" fill="#a13d3d"/>
+        <circle cx="65" cy="60" r="8" fill="#8b3535"/>
+    </symbol>
+    
+    <!-- Юпитер -->
+    <symbol id="jupiter" viewBox="0 0 120 120">
+        <ellipse cx="60" cy="60" rx="50" ry="45" fill="#d2b48c"/>
+        <ellipse cx="45" cy="45" rx="20" ry="15" fill="#b89a7a"/>
+        <ellipse cx="80" cy="70" rx="25" ry="20" fill="#a58364"/>
+        <circle cx="35" cy="75" r="8" fill="#8b6f54"/>
+    </symbol>
+    
+    <!-- Сатурн -->
+    <symbol id="saturn" viewBox="0 0 140 120">
+        <ellipse cx="70" cy="60" rx="45" ry="40" fill="#e0b060"/>
+        <ellipse cx="55" cy="50" rx="15" ry="10" fill="#c49a6c"/>
+        <ellipse cx="85" cy="70" rx="20" ry="15" fill="#b3864a"/>
+        <!-- Кольца -->
+        <ellipse cx="70" cy="60" rx="70" ry="20" fill="none" stroke="#c0a878" stroke-width="5"/>
+        <ellipse cx="70" cy="60" rx="60" ry="15" fill="none" stroke="#a58b6b" stroke-width="4"/>
+    </symbol>
+    
+    <!-- Уран -->
+    <symbol id="uranus" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" fill="#a3c9f1"/>
+        <circle cx="30" cy="40" r="8" fill="#7fa5c7"/>
+        <circle cx="65" cy="60" r="10" fill="#5f8ab3"/>
+    </symbol>
+    
+    <!-- Нептун -->
+    <symbol id="neptune" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" fill="#4169e1"/>
+        <ellipse cx="40" cy="40" rx="12" ry="8" fill="#2e4da8"/>
+        <circle cx="65" cy="55" r="8" fill="#1a3a8c"/>
+    </symbol>
+</svg>
+
+    </head>
+
+<body>
+    <header >
+            <nav class="navigation">
+                <a href="idex.html" class="nav-button">Главная</a>
+                <a href="astronomy.html" class="nav-button">Астрономия</a>
+                <a href="tech.html" class="nav-button">Техника</a>
+                <a href="physics.html" class="nav-button">Конструкция</a>
+            </nav>
+        </header>
+
+    <main style="margin-top: 120px;">
+        
+
+
+        <section class="section-star">
+            <h2 style="margin: 40px; margin-bottom: 20px; color: #ffffff; font-size: 40px;">Звезды рядом!</h2>
+            <div class="star-card">
+
+       
+        <div class="left-column1">
+            <h1 class="star-name">Сириус</h1>
+
+            <button class="star-button" id="infoButton">О звезде</button>
+
+            <div class="popup" id="infoPopup">
+                <h3>Характеристики Сириуса</h3>
+                <ul>
+                    <li><strong>Созвездие:</strong> Большой Пёс</li>
+                    <li><strong>Расстояние:</strong> 8.6 световых лет</li>
+                    <li><strong>Видимая звёздная величина:</strong> -1.46</li>
+                    <li><strong>Тип:</strong> Двойная звезда (Сириус A и B)</li>
+                    <li><strong>Температура:</strong> 9,940 K (A), 25,000 K (B)</li>
+                </ul>
+                
+                <button class="close-button">✖</button>
+            </div>
+        </div>
+
+
+        <div class="right-column1">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Sirius_A_and_B_Hubble_photo.jpg/800px-Sirius_A_and_B_Hubble_photo.jpg" alt="Фотография звезды Сириус" class="star-image">
+
+
+            <button class="star-button" id="historyButton">История обнаружения</button>
+
+            <div class="popup" id="historyPopup">
+                <h3>История обнаружения Сириуса</h3>
+                <p style="font-size: 20px;">Сириус известен с древнейших времён. Древние египтяне связывали его с богиней Исидой и по его первому утреннему восходу предсказывали разлив Нила. В 1844 году немецкий астроном Фридрих Бессель предположил наличие у Сириуса невидимого спутника, что позже подтвердилось — это был Сириус B, первый открытый белый карлик.</p>
+                
+                <button class="close-button">✖</button>
+            </div>
+        </div>
+    </div>
+
+
+            </div>
+
+
+ 
+            <div class="star-card">
+
+       
+        <div class="left-column1">
+            <h1 class="star-name">Сириус</h1>
+
+            <button class="star-button" id="infoButton">О звезде</button>
+
+            <div class="popup" id="infoPopup">
+                <h3>Характеристики Сириуса</h3>
+                <ul>
+                    <li><strong>Созвездие:</strong> Большой Пёс</li>
+                    <li><strong>Расстояние:</strong> 8.6 световых лет</li>
+                    <li><strong>Видимая звёздная величина:</strong> -1.46</li>
+                    <li><strong>Тип:</strong> Двойная звезда (Сириус A и B)</li>
+                    <li><strong>Температура:</strong> 9,940 K (A), 25,000 K (B)</li>
+                </ul>
+                
+                <button class="close-button">✖</button>
+            </div>
+        </div>
+
+
+        <div class="right-column1">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Sirius_A_and_B_Hubble_photo.jpg/800px-Sirius_A_and_B_Hubble_photo.jpg" alt="Фотография звезды Сириус" class="star-image">
+
+
+            <button class="star-button" id="historyButton">История обнаружения</button>
+
+            <div class="popup" id="historyPopup">
+                <h3>История обнаружения Сириуса</h3>
+                <p style="font-size: 20px;">Сириус известен с древнейших времён. Древние египтяне связывали его с богиней Исидой и по его первому утреннему восходу предсказывали разлив Нила. В 1844 году немецкий астроном Фридрих Бессель предположил наличие у Сириуса невидимого спутника, что позже подтвердилось — это был Сириус B, первый открытый белый карлик.</p>
+                
+                <button class="close-button">✖</button>
+            </div>
+        </div>
+    </div>
+
+
+            </div>
+            <!-- stars -->
+        </section>
+
+
+
+        <section class="section-star">
+            
+            <h2 style="margin: 40px; margin-bottom: 20px; color: #ffffff; font-size: 40px;">Черные дыры тоже!</h2>
+            <div class="star-card">
+
+       
+        <div class="left-column1">
+            <h1 class="star-name">Сириус</h1>
+
+            <button class="star-button" id="infoButton">О звезде</button>
+
+            <div class="popup" id="infoPopup">
+                <h3>Характеристики Сириуса</h3>
+                <ul>
+                    <li><strong>Созвездие:</strong> Большой Пёс</li>
+                    <li><strong>Расстояние:</strong> 8.6 световых лет</li>
+                    <li><strong>Видимая звёздная величина:</strong> -1.46</li>
+                    <li><strong>Тип:</strong> Двойная звезда (Сириус A и B)</li>
+                    <li><strong>Температура:</strong> 9,940 K (A), 25,000 K (B)</li>
+                </ul>
+                
+                <button class="close-button">✖</button>
+            </div>
+        </div>
+
+
+        <div class="right-column1">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Sirius_A_and_B_Hubble_photo.jpg/800px-Sirius_A_and_B_Hubble_photo.jpg" alt="Фотография звезды Сириус" class="star-image">
+
+
+            <button class="star-button" id="historyButton">История обнаружения</button>
+
+            <div class="popup" id="historyPopup">
+                <h3>История обнаружения Сириуса</h3>
+                <p style="font-size: 20px;">Сириус известен с древнейших времён. Древние египтяне связывали его с богиней Исидой и по его первому утреннему восходу предсказывали разлив Нила. В 1844 году немецкий астроном Фридрих Бессель предположил наличие у Сириуса невидимого спутника, что позже подтвердилось — это был Сириус B, первый открытый белый карлик.</p>
+                
+                <button class="close-button">✖</button>
+            </div>
+        </div>
+    </div>
+
+
+            </div>
+
+            <!-- black holes -->
+        </section>
+
+
+
+        <section class="section-star">
+            <!-- white holes -->
+
+             <h2 style="margin: 40px; margin-bottom: 20px; color: #ffffff; font-size: 40px;">И даже белые дыры!</h2>
+            <div class="star-card">
+
+       
+        <div class="left-column1">
+            <h1 class="star-name">Сириус</h1>
+            <p>GHBhsdbhd</p>
+            <button class="star-button" id="infoButton">О звезде</button>
+
+            <div class="popup" id="infoPopup">
+                <h3>Характеристики Сириуса</h3>
+                <ul>
+                    <li><strong>Созвездие:</strong> Большой Пёс</li>
+                    <li><strong>Расстояние:</strong> 8.6 световых лет</li>
+                    <li><strong>Видимая звёздная величина:</strong> -1.46</li>
+                    <li><strong>Тип:</strong> Двойная звезда (Сириус A и B)</li>
+                    <li><strong>Температура:</strong> 9,940 K (A), 25,000 K (B)</li>
+                </ul>
+                
+                <button class="close-button">✖</button>
+            </div>
+        </div>
+
+
+        <div class="right-column1">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Sirius_A_and_B_Hubble_photo.jpg/800px-Sirius_A_and_B_Hubble_photo.jpg" alt="Фотография звезды Сириус" class="star-image">
+
+
+            <button class="star-button" id="historyButton">История обнаружения</button>
+
+            <div class="popup" id="historyPopup">
+                <h3>История обнаружения Сириуса</h3>
+                <p style="font-size: 20px;">Сириус известен с древнейших времён. Древние египтяне связывали его с богиней Исидой и по его первому утреннему восходу предсказывали разлив Нила. В 1844 году немецкий астроном Фридрих Бессель предположил наличие у Сириуса невидимого спутника, что позже подтвердилось — это был Сириус B, первый открытый белый карлик.</p>
+                
+                <button class="close-button">✖</button>
+            </div>
+        </div>
+    </div>
+
+
+            </div>
+
+        </section>
+
+
+
+
+
+<!-- ========== СОЛНЕЧНАЯ СИСТЕМА - ИСПРАВЛЕННАЯ ========== -->
+<section class="solar-system-section">
+    <h2 class="section-title">Солнечная система</h2>
+    
+    <div class="solar-system-container">
+        
+        <!-- ОРБИТЫ -->
+        <div class="orbit orbit-1"></div>
+        <div class="orbit orbit-2"></div>
+        <div class="orbit orbit-3"></div>
+        <div class="orbit orbit-4"></div>
+        <div class="orbit orbit-5"></div>
+        <div class="orbit orbit-6"></div>
+        <div class="orbit orbit-7"></div>
+        <div class="orbit orbit-8"></div>
+        
+        <!-- СОЛНЦЕ -->
+        <div class="planet sun" data-planet="sun">
+            <div class="planet-circle sun-circle"></div>
+            <span class="planet-label">Солнце</span>
+        </div>
+        
+        <!-- ПЛАНЕТЫ -->
+        <div class="planet mercury" data-planet="mercury">
+            <div class="planet-circle mercury-circle"></div>
+            <span class="planet-label">Меркурий</span>
+        </div>
+        
+        <div class="planet venus" data-planet="venus">
+            <div class="planet-circle venus-circle"></div>
+            <span class="planet-label">Венера</span>
+        </div>
+        
+        <div class="planet earth" data-planet="earth">
+            <div class="planet-circle earth-circle"></div>
+            <span class="planet-label">Земля</span>
+        </div>
+        
+        <div class="planet mars" data-planet="mars">
+            <div class="planet-circle mars-circle"></div>
+            <span class="planet-label">Марс</span>
+        </div>
+        
+        <div class="planet jupiter" data-planet="jupiter">
+            <div class="planet-circle jupiter-circle"></div>
+            <span class="planet-label">Юпитер</span>
+        </div>
+        
+        <div class="planet saturn" data-planet="saturn">
+            <div class="planet-circle saturn-circle"></div>
+            <div class="saturn-ring"></div>
+            <span class="planet-label">Сатурн</span>
+        </div>
+        
+        <div class="planet uranus" data-planet="uranus">
+            <div class="planet-circle uranus-circle"></div>
+            <span class="planet-label">Уран</span>
+        </div>
+        
+        <div class="planet neptune" data-planet="neptune">
+            <div class="planet-circle neptune-circle"></div>
+            <span class="planet-label">Нептун</span>
+        </div>
+        
+    </div>
+</section>
+
+
+<script src="script.js"></script>
+
+    </main>
+    <footer>
+        <p>Made by MeidinH</p>
+    </footer>
+    <!-- КНОПКА "НАВЕРХ" -->
+<button id="backToTop" class="back-to-top" aria-label="Наверх">↑</button>
+</body>

@@ -1,0 +1,2029 @@
+*
+{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== УНИВЕРСАЛЬНЫЙ MIXIN ДЛЯ APPEARANCE =====
+.appearance-none {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Или в виде классов 
+.no-appearance {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+} */
+
+body 
+{
+    height: 100%;
+    image-orientation: flip;
+    background-color: black; 
+    margin: 0;
+    padding: 0;
+    
+    background-image: url('https://img.freepik.com/free-vector/bring-night-space-wallpaper-with-glowing-starfield_1017-53512.jpg?t=st=1771261372~exp=1771264972~hmac=5ad170960a2d5a1655055a7c54d61928cc852dff85d14cd27029424d4803bde7.png');
+    background-repeat: repeat;
+}
+
+
+
+header 
+{
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    height: 80px;
+    font-size: 45px;
+    padding: 0px 0px;
+    z-index: 9999;
+}
+
+main
+{
+    
+    margin-top: 80px;
+    position: relative;
+    min-height:100vh;
+    height:over;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* overflow: hidden; */
+    z-index: 1;
+    flex-direction: column;  
+    gap: 30px; 
+    padding-bottom: 60px;
+    
+}
+
+footer 
+{
+    
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    min-height: 220px;
+    
+}
+
+.navigation
+{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 2px;
+}
+
+.nav-button
+{
+    text-decoration: none;
+    cursor: pointer; 
+    font-family: 'Arial', sans-serif; 
+    font-size: 30px; 
+    font-weight: bold; 
+    font-style: normal; 
+    
+    color: #000000; 
+    background-color: #ffffff; 
+    
+    
+    padding: 20px 24px; 
+    border-radius: 0px; 
+    
+    display: inline-block; 
+    border: 2px solid transparent; 
+}
+
+
+
+
+
+
+
+
+
+.top-section {
+    color: #fceec3; 
+    text-shadow: 0 0 20px rgba(255, 249, 217, 0.93);
+    margin-top: 20px;    
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: none;
+    border-radius: 20px;
+}
+
+.two-columns {
+    display: flex;      
+    gap: 30px;        
+    width: 100%;
+}
+
+.left-column {
+    flex: 2;           
+    background: rgba(27, 27, 27, 0.89);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: #41414193;
+    
+}
+
+.right-column {
+    font-weight: bold;
+    flex: 1;           
+    display: flex;      
+    flex-direction: column; 
+    gap: 30px;          
+}
+
+.big-text h2 {
+    font-size: 32px;
+    /* color: #be6d11; */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.big-text p {
+    text-shadow: none;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.big-text img {
+    text-shadow: none;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+
+.small-block {
+    background: rgba(105, 105, 105, 0.911);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.small-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.small-block h3 {
+    font-size: 24px;
+    /* color: #d35934; */
+    margin-bottom: 15px;
+}
+
+.small-block p {
+    text-shadow: none;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.small-button {
+    cursor: pointer; 
+    font-weight: bold;
+    display: inline-block;
+    padding: 12px 25px;
+    background: #e5e5e5;
+    color: #ffa600;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 22px;
+    transition: all 0.3s ease;
+}
+
+.small-button:hover 
+{
+    background: #ffffff;
+    transform: scale(1.05);
+}
+
+
+.down-section 
+{ 
+    
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: #fcf9f9;
+    border-radius: 20px;
+    border-radius: 10px 50px;
+    color:white;
+}
+
+
+
+
+        .text-with-image-flex 
+        {
+            margin-top: 0px;
+            display: flex;
+            gap: 30px;
+            align-items: center;     
+            margin-bottom: 0px;
+            padding-bottom: 40px;
+        }
+
+        .text-with-image-flex p 
+        {
+            flex: 1;
+            font-size: 25px;
+            line-height: 1.8;
+            
+        }
+
+        .text-with-image-flex img 
+        {
+            text-decoration: none;
+            font-family: 'Arial', sans-serif; 
+            font-size: 30px; 
+            font-weight: bold; 
+            font-style: normal; 
+            width: 400px;
+            height: 250px;
+            object-fit: cover;      
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .text-with-image-flex img:hover 
+        {
+            transform: scale(1.02);
+        }
+
+        .text-content 
+        {
+            
+            flex: 1;  
+        }
+
+        .text-content p 
+        {
+             margin-bottom: 20px;  
+        }
+
+        .text-content a
+        {
+            margin-left: 0px;
+            color:#e5e5e5;
+            text-decoration: none;
+            font-family: 'Arial', sans-serif; 
+            font-size: 30px; 
+            font-weight: bold; 
+            font-style: normal; 
+        }
+        
+    .text-cosmos-start
+        {
+            
+            display: flex;
+            padding-bottom: 40px;
+            flex: 1;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #ffffff;
+        }
+
+        .text-cosmos-start h2
+            {
+                font-size: 30px;
+            }
+
+            
+
+
+
+
+
+
+
+
+
+.section-star
+{
+    font-family: Arial, sans-serif;
+    color:#e5e5e5; 
+    min-height: 100px;
+    width: 1600px;
+    max-height: auto;
+    background-color: #000000;
+}
+
+.section-star h
+{
+    font-weight: lighter;
+    font-size: 35px;
+    
+
+}
+
+
+.section-star p
+{
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.star-card {
+    max-width: 1800px; 
+    width: 100%;
+    background: rgba(31, 31, 31, 0.16); 
+    backdrop-filter: blur(10px); 
+    border-radius: 20px; 
+    padding: 25px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); 
+    border: 1px solid rgba(55, 54, 54, 0.2); 
+    display: flex;
+    gap: 50px; 
+    position: relative;     
+    z-index: 1;             
+    isolation: isolate;      
+    overflow: visible !important;
+}
+
+
+
+.left-column1 {
+    background-color:rgba(70, 70, 70, 0.499);
+    flex: 1; 
+    display: flex;
+    flex-direction: column; 
+    gap: 25px; 
+    position: relative; 
+    border-radius: 10px;
+    padding: 20px;
+    
+
+}
+
+
+.right-column1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    position: relative; 
+}
+
+.left-column, .right-column {
+    position: relative;
+    z-index: 2;
+    overflow: visible;  
+           
+}
+
+.star-name {
+    font-size: 45px; 
+    font-weight: 800;
+    color: #fceec3; 
+    text-shadow: 0 0 20px rgba(255, 249, 217, 0.93); 
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+
+.star-button {
+    background: transparent; 
+    border: 2px solid #c5c4c0; 
+    color: #ebe6d6;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px 30px;
+    border-radius: 30px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    text-transform: uppercase; 
+    letter-spacing: 2px;
+    align-self: flex-start; 
+}
+
+
+.star-button:hover {
+    background: #f3ddd2c2; 
+    color: #b31500; 
+    box-shadow: 0 0 25px #fca393; 
+    transform: translateY(-3px); 
+}
+
+
+.right-column1 .star-button {
+    align-self: flex-start;
+}
+
+
+.star-image {
+    width: 100%; 
+    height: auto; 
+    border-radius: 20px; 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease; 
+}
+.star-image:hover {
+    transform: scale(1.02); 
+}
+
+
+.popup {
+    font-size: 20px;
+    display: none;
+    top: 100%; 
+    left: 0;
+    width: 100%; 
+    background: rgba(93, 126, 139, 0.993); 
+    backdrop-filter: blur(5px);
+    border: 1px solid #ffd966;
+    border-radius: 20px;
+    padding: 30px;
+    color: #fff;
+    box-shadow: 0 25px 50px -12px black;
+    position: absolute;
+    z-index: 999999 !important;
+    overflow: visible;
+    
+    
+    animation: fadeInUp 0.3s ease-out; 
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    100% {
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+
+.popup h3 {
+    color: #fcf0cd;
+    text-shadow: #ebe6d6;
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 217, 102, 0.3);
+    padding-bottom: 10px;
+}
+
+.popup ul {
+    list-style-position: inside;
+    margin-bottom: 20px;
+}
+.popup li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+.popup p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+.popup strong {
+    color: #b4ecea;
+}
+
+
+.close-button {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.close-button:hover {
+    background: #cccccc;
+    color: #da1717;
+    border-color: #5f5f5f;
+}
+
+.star-card:not(:last-child) {
+    margin-bottom: 30px;  
+    z-index: auto;        
+}
+.star-card:has(.popup[style*="display: block"]) 
+{
+    z-index: 1000; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===========================================
+   СОЛНЕЧНАЯ СИСТЕМА - ИСПРАВЛЕННАЯ ВЕРСИЯ
+   =========================================== */
+
+.solar-system-section {
+    margin-top: 80px;
+    padding: 40px 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 60px;
+}
+
+.section-title {
+    color: #ffd966;
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 800;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+/* Фиксированная ширина, чтобы всё влезло */
+.solar-system-container {
+    position: relative;
+    width: over;        /* Уменьшил с 1400px до 1200px */
+    height: 1200px;         /* Высота контейнера */
+    margin: 0 auto;
+    background: radial-gradient(circle at 50% 50%, #0a1a2a, #03030a);
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: visible;     /* Важно: ничего не обрезаем */
+}
+
+/* ОРБИТЫ - все centered */
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Радиусы орбит */
+.orbit-1 { width: 300px; height: 300px; }  /* Меркурий */
+.orbit-2 { width: 500px; height: 500px; }  /* Венера */
+.orbit-3 { width: 700px; height: 700px; }  /* Земля */
+.orbit-4 { width: 900px; height: 900px; }  /* Марс */
+.orbit-5 { width: 1100px; height: 1100px; }  /* Юпитер */
+.orbit-6 { width: 1300px; height: 1300px; }  /* Сатурн */
+.orbit-7 { width: 1500px; height: 1500px; }  /* Уран */
+.orbit-8 { width: 1700px; height: 1700px; }  /* Нептун */
+/* ===== ПЛАНЕТЫ ===== */
+.planet {
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    /* Важно: отключаем любые трансформации, которые поворачивают подпись */
+    transform-style: preserve-3d;
+}
+
+/* Солнце в центре */
+.sun {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* РАЗМЕЩЕНИЕ ПЛАНЕТ ПО ОРБИТАМ (ВРУЧНУЮ, НО ТОЧНО) */
+
+/* Меркурий - 45 градусов */
+.mercury {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(156px) rotate(133deg) translateX(10px) rotate(-135deg);
+    
+}
+
+/* Венера - 90 градусов */
+.venus {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(10px) translateY(123px) rotate(90deg) translateX(120px) rotate(-90deg);
+}
+
+/* Земля - 135 градусов */
+.earth {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(-390px) translateY(80px) rotate(45deg) translateX(120px) rotate(-45deg);
+}
+
+/* Марс - 180 градусов */
+.mars {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(-120px) translateY(-150px) rotate(180deg) translateX(300px) rotate(-180deg);
+}
+
+/* Юпитер - 225 градусов */
+.jupiter {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(-20px) translateY(-325px) rotate(225deg) translateX(260px) rotate(-225deg);
+}
+
+/* Сатурн - 270 градусов */
+.saturn {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(390px) translateY(-200px) rotate(270deg) translateX(320px) rotate(-270deg);
+}
+
+/* Уран - 315 градусов */
+.uranus {
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -80%) translateX(450px) translateY(200px) rotate(315deg) translateX(400px) rotate(-315deg);
+}
+
+/* Нептун - 0 градусов (справа) */
+.neptune {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(750px) translateY(400px);
+}
+
+/* ===== УВЕЛИЧЕННЫЕ РАЗМЕРЫ ПЛАНЕТ ===== */
+.planet-circle {
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.sun-circle {
+    width: 200px;           /* Было 70px */
+    height: 200px;
+    background: radial-gradient(circle at 30% 30%, #ffdd77, #ffaa00);
+    box-shadow: 0 0 100px #ffaa00;
+}
+
+.mercury-circle {
+    width: 50px;            /* Было 14px */
+    height: 50px;
+    background: radial-gradient(circle at 30% 30%, #a58b6b, #6b5e4a);
+}
+
+.venus-circle {
+    width: 75px;            /* Было 20px */
+    height: 75px;
+    background: radial-gradient(circle at 30% 30%, #e6b800, #b38600);
+}
+
+.earth-circle {
+    width: 80px;            /* Было 22px */
+    height: 80px;
+    background: radial-gradient(circle at 30% 30%, #2e86c1, #1a5a8c);
+}
+
+.mars-circle {
+    width: 60px;            /* Было 18px */
+    height: 60px;
+    background: radial-gradient(circle at 30% 30%, #c44c4c, #8b3535);
+}
+
+.jupiter-circle {
+    width: 140px;            /* Было 50px */
+    height: 140px;
+    background: radial-gradient(circle at 30% 30%, #d2b48c, #8b6f54);
+}
+
+.saturn-circle {
+    width: 120px;            /* Было 44px */
+    height: 120px;
+    background: radial-gradient(circle at 30% 30%, #e0b060, #b3864a);
+    position: relative;
+}
+
+.uranus-circle {
+    width: 90px;            /* Было 32px */
+    height: 90px;
+    background: radial-gradient(circle at 30% 30%, #a3c9f1, #5f8ab3);
+}
+
+.neptune-circle {
+    width: 87px;            /* Было 32px */
+    height: 87px;
+    background: radial-gradient(circle at 30% 30%, #4169e1, #1a3a8c);
+}
+
+/* Кольца Сатурна - увеличил */
+.saturn-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180px;            /* Было 60px */
+    height: 50px;           /* Было 16px */
+    border: 3px solid rgba(114, 101, 74, 0.5);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* ===== ПОДПИСИ - ИСПРАВЛЕНЫ ===== */
+.planet-label {
+    position: absolute;
+    bottom: -45px;          /* Опустил ниже */
+    left: 50%;
+    transform: translateX(-50%);  /* Только горизонтальное смещение! */
+    color: white;
+    font-size: 16px;        /* Увеличил */
+    font-weight: bold;
+    white-space: nowrap;
+    /* background: rgba(0, 0, 0, 0.8); */
+    padding: 5px 12px;
+    border-radius: 20px;
+    /* border: 2px solid #9c9b98; */
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 1000;
+    /* Убираем любые вращения */
+    rotate: 0deg;
+}
+
+/* При наведении показываем подпись */
+.planet:hover .planet-label {
+    opacity: 1;
+}
+
+/* Свечение при наведении */
+.planet:hover .planet-circle {
+    transform: scale(1.2);
+    box-shadow: 0 0 30px #facd46;
+    transition: all 0.3s ease;
+}
+
+/* Активная планета */
+.planet.active .planet-circle {
+    transform: scale(1.3);
+    box-shadow: 0 0 40px #ffd966;
+    border: 3px solid #ffd966;
+}
+
+/* Солнце пульсирует */
+.sun {
+    animation: sunPulse 3s infinite;
+}
+
+@keyframes sunPulse {
+    0%, 100% { filter: drop-shadow(0 0 30px #ffaa00); }
+    50% { filter: drop-shadow(0 0 60px #ffaa00); }
+}
+
+/* ===== ПОПАПЫ ===== */
+.planet-popup {
+    position: fixed !important;
+    border: 3px solid #ffd966 !important;
+    border-radius: 20px !important;
+    padding: 25px !important;
+    color: #fff !important;
+    z-index: 1000000 !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8) !important;
+    max-width: 350px !important;
+    width: auto !important;
+    min-width: 280px !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    backdrop-filter: blur(5px);
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===========================================
+   ГАЛЕРЕЯ ФОТОГРАФИЙ - ИСПРАВЛЕННАЯ ВЕРСИЯ
+   =========================================== */
+
+.planet-popup {
+    background: rgba(93, 126, 139, 0.993) !important;
+    max-width: 650px !important;
+    min-width: 600px !important;
+    padding: 25px !important;
+    border: 3px solid #918c7e !important;
+    border-radius: 25px !important;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Флекс-контейнер для фото и текста */
+.popup-flex {
+    display: flex !important;
+    gap: 30px !important;
+    margin-top: 20px !important;
+    align-items: flex-start !important;  /* Выравнивание по верхнему краю */
+}
+
+/* Контейнер галереи - слева */
+.popup-gallery {
+    flex: 0 0 300px !important;  /* Фиксированная ширина 180px */
+    position: relative !important;
+    height: 300px !important;
+    border-radius: 15px !important;
+    overflow: hidden !important;
+    border: 2px solid #ffd966 !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3) !important;
+    background: #000 !important;  /* Фон на время загрузки */
+}
+
+/* Контейнер для всех фото */
+.gallery-images {
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Каждое фото */
+.gallery-image {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;  /* Важно: фото покрывает всю область */
+    opacity: 0 !important;
+    transition: opacity 0.3s ease !important;
+    pointer-events: none !important;
+    border-radius: 13px !important;  /* Чуть меньше родительского */
+}
+
+/* Активное фото */
+.gallery-image.active {
+    opacity: 1 !important;
+    z-index: 2 !important;
+}
+
+/* Стрелки навигации */
+.gallery-arrow {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 28px !important;
+    height: 28px !important;
+    background:  rgba(93, 126, 139, 0.993) !important;
+    border: 2px solid #ffd966 !important;
+    color: #ffd966 !important;
+    border-radius: 50% !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    z-index: 100 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.2s ease !important;
+    line-height: 1 !important;
+    padding: 0 !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3) !important;
+}
+
+.gallery-arrow:hover {
+    background: #ffd966 !important;
+    color: #1e1e2f !important;
+    transform: translateY(-50%) scale(1.1) !important;
+}
+
+.gallery-arrow.left {
+    left: 5px !important;
+}
+
+.gallery-arrow.right {
+    right: 5px !important;
+}
+
+/* Точки-индикаторы */
+.gallery-dots {
+    position: absolute !important;
+    bottom: 8px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    display: flex !important;
+    gap: 6px !important;
+    z-index: 100 !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    padding: 4px 8px !important;
+    border-radius: 20px !important;
+    backdrop-filter: blur(2px) !important;
+}
+
+.gallery-dot {
+    width: 6px !important;
+    height: 6px !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.5) !important;
+    border: 1px solid #ffd966 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    padding: 0 !important;
+}
+
+.gallery-dot.active {
+    background: #ffd966 !important;
+    transform: scale(1.3) !important;
+    box-shadow: 0 0 8px #ffd966 !important;
+}
+
+/* Текстовая часть - справа */
+.popup-text {
+    flex: 1 !important;
+    min-width: 0 !important;  /* Чтобы текст не вылезал */
+}
+
+/* Заголовок */
+.planet-popup h3 {
+    color: #ffd966 !important;
+    font-size: 28px !important;
+    margin: 0 0 5px 0 !important;
+    padding-right: 30px !important;  /* Место для крестика */
+}
+
+/* Описание */
+.planet-popup p {
+    margin: 8px 0 !important;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+    color: #f0f0f0 !important;
+}
+
+.planet-popup strong {
+    color: #e6e8e9 !important;
+}
+
+/* Блок с характеристиками */
+.planet-popup .planet-details {
+    background: rgba(0, 0, 0, 0.4) !important;
+    border-radius: 15px !important;
+    padding: 15px !important;
+    margin-top: 12px !important;
+    border: 1px solid rgba(255, 217, 102, 0.3) !important;
+}
+
+.planet-popup .planet-details p {
+    margin: 5px 0 !important;
+    font-size: 14px !important;
+}
+
+/* Кнопка закрытия */
+.planet-popup .close-button {
+    position: absolute !important;
+    top: 15px !important;
+    right: 15px !important;
+    width: 30px !important;
+    height: 30px !important;
+    background: none;
+    color: #ffffff;
+    border-color: #ffffff;
+    border-radius: 50% !important;
+    font-size: 16px !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.2s !important;
+    z-index: 200 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+}
+
+.planet-popup .close-button:hover {
+    background: #cccccc;
+    color: #da1717;
+    border-color: #5f5f5f;
+    transform: scale(1.1) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ===========================================
+   СТРАНИЦА КОСМИЧЕСКИХ АГЕНТСТВ
+   =========================================== */
+
+.space-agencies-page {
+    max-width: 1800px;
+    max-height: over;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #000;
+}
+
+/* ===== ЗЕМЛЯ С ЛУНОЙ ===== */
+.earth-moon-section {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 40px;
+    background:none;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.earth-moon-container {
+    top: 10px;
+    left: 20%;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: none;
+}
+
+/* Земля */
+.earth1 {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #2a6f8f, #1a4f6f);
+    box-shadow: 0 0 50px rgba(100, 150, 200, 0.5);
+    overflow: hidden;
+    
+}
+
+/* Материки (зеленые) */
+.earth-continent {
+    position: absolute;
+    background: #2e7d32;
+    border-radius: 60% 40% 50% 50%;
+    opacity: 0.8;
+}
+
+.earth-continent-1 {
+    top: 30%;
+    left: 20%;
+    width: 80px;
+    height: 60px;
+    transform: rotate(20deg);
+    background: #2e7d32;
+}
+
+.earth-continent-2 {
+    top: 30%;
+    left: 60%;
+    width: 45px;
+    height: 70px;
+    transform: rotate(-10deg);
+    background: #388e3c;
+}
+
+.earth-continent-3 {
+    top: 24%;
+    left:  8%;
+    width: 45px;
+    height: 28px;
+    transform: rotate(45deg);
+    background: #43a047;
+}
+.earth-continent-4 {
+    top: 50%;
+    left: 15%;
+    width: 40px;
+    height: 50px;
+    background: #c4af38;
+}
+
+/* Ледники (белые) */
+.earth-ice {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+}
+
+.north-pole {
+    top: 5%;
+    left: 40%;
+    width: 30px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.south-pole {
+    bottom: 5%;
+    left: 40%;
+    width: 30px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Орбита луны */
+.moon-orbit {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    width: 250px;
+    height: 250px;
+    transform: translate(-50%, -50%);
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    animation: orbitRotate 20s linear infinite;
+}
+
+/* Луна */
+.moon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle at 30% 30%, #c0c0c0, #808080);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes orbitRotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* ===== ДВЕ КОЛОНКИ ===== */
+.agencies-two-columns {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.agency-column {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.agency-title {
+    color: #fceec3; 
+    text-shadow: 0 0 20px rgba(255, 249, 217, 0.93); 
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #c5bb9d;
+}
+
+/* Секция внутри колонки */
+.agency-section {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+/* Для зеркального отображения (NASA) */
+.agency-section.mirror {
+    flex-direction: row-reverse;
+}
+
+/* Галерея */
+.section-gallery {
+    flex: 0 0 180px;
+    position: relative;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.gallery-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #ffd966;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffd966;
+}
+
+.image-caption {
+    margin-top: 5px;
+    color: #fceec3; 
+    text-shadow: 0 0 20px rgba(255, 249, 217, 0.93); 
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+.image-caption:hover {
+    background: rgba(255, 217, 102, 0.2);
+}
+
+/* Стрелки галереи */
+.gallery-arrow {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid #c0b9a2;
+    color: #ffd966;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.gallery-arrow:hover {
+    background: #ffd966;
+    color: #000;
+}
+
+.left-arrow {
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right-arrow {
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Текстовая часть */
+.section-text {
+    flex: 1;
+}
+
+.section-text h3 {
+    color: #fceec3; 
+    text-shadow: 0 0 20px rgba(255, 249, 217, 0.93); 
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.section-text p {
+    color: #f0f0f0;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* ПОПАПЫ (появляются под подписью) */
+.person-popup, .rocket-popup {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 250px;
+    background: rgba(93, 126, 139, 0.993); 
+    backdrop-filter: blur(5px);
+    border: 1px solid #ffd966;
+    border-radius: 20px;
+    padding: 15px;
+    z-index: 1000;
+    margin-top: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.person-popup p, .rocket-popup p {
+    color: white !important;
+    font-size: 14px !important;
+    margin: 5px 0 !important;
+}
+
+/* Адаптация */
+@media (max-width: 1000px) {
+    .agencies-two-columns {
+        flex-direction: column;
+    }
+    
+    .agency-section {
+        flex-direction: column !important;
+    }
+    
+    .section-gallery {
+        flex: auto;
+        width: 100%;
+    }
+    
+    .gallery-container {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+    
+    .gallery-item {
+        min-width: 150px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== КАРТИНКИ ПО БОКАМ ОТ ЗЕМЛИ ===== */
+.side-image1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 120px;
+    text-align: center;
+    z-index: 30;
+    animation: floatImage 3s ease-in-out infinite;
+}
+
+.left-image {
+    left: 0%;  /* Отступ слева */
+}
+
+.right-image {
+    right: 44%; /* Отступ справа */
+}
+
+.side-img {
+    
+    min-width: 200px;
+    min-height: 200px;
+    /* filter: drop-shadow(0 0 20px rgba(255, 217, 102, 0.5)); */
+    transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 0px;
+    
+}
+
+.side-img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 30px #ffd966);
+    background: rgba(255, 217, 102, 0.1);
+}
+
+.side-image .image-caption {
+    margin-top: 10px;
+    color: #ffd966;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255, 217, 102, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===========================================
+   СТРАНИЦА "БАЗОВОЕ СТРОЕНИЕ РАКЕТЫ"
+   =========================================== */
+
+.rocket-page {
+    max-width: 1650px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+}
+
+/* ===== СЕКЦИЯ 1: СТРОЕНИЕ РАКЕТЫ ===== */
+.rocket-structure-section {
+    margin-bottom: 80px;
+}
+
+.section-main-title {
+    font-size: 48px;
+    color: #fceec3; 
+    text-shadow: 0 0 20px rgba(255, 249, 217, 0.93); 
+    text-align: center;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #faecc4;
+    padding-bottom: 20px;
+}
+
+.rocket-block {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 60px;
+    background: rgba(0, 0, 0, 0.767);
+    border-radius: 30px;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.rocket-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.block-text {
+    flex: 1;
+}
+
+.block-text h2 {
+    color: #fceec3; 
+    text-shadow: 0 0 20px rgba(255, 249, 217, 0.93); 
+    font-size: 32px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 217, 102, 0.3);
+    padding-bottom: 10px;
+}
+
+.block-text p {
+    color: #f0f0f0;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.importance {
+    background: rgba(255, 217, 102, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    border-left: 4px solid #e9d087;
+    font-weight: 500;
+}
+
+.block-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
+}
+
+/* ===== РИСУНКИ ЧАСТЕЙ РАКЕТЫ (геометрические фигуры) ===== */
+.rocket-drawing {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+/* Нос */
+.nose-cone {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 100px solid #eeddac;
+}
+
+.nose-base {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 40px;
+    background: #c0c0c0;
+    border-radius: 10px;
+}
+
+/* Корпус */
+.body-top {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 40px;
+    background: #a0a0a0;
+    border-radius: 20px 20px 0 0;
+}
+
+.body-middle {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 80px;
+    background: #c0c0c0;
+}
+
+.body-bottom {
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 40px;
+    background: #808080;
+    border-radius: 0 0 20px 20px;
+}
+
+/* Двигатель */
+.engine-chamber {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 80px;
+    background: #606060;
+    border-radius: 20px;
+}
+
+.engine-nozzle {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 50px;
+    background: #808080;
+    border-radius: 50% 50% 20px 20px;
+}
+
+.engine-flame {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 40px;
+    background: linear-gradient(to bottom, #ffaa00, #ff5500);
+    border-radius: 50% 50% 0 0;
+    filter: blur(4px);
+    animation: flameFlicker 0.2s infinite alternate;
+}
+
+@keyframes flameFlicker {
+    from { height: 40px; opacity: 0.8; }
+    to { height: 50px; opacity: 1; }
+}
+
+/* Топливные баки */
+.fuel-tank {
+    position: absolute;
+    width: 50px;
+    height: 80px;
+    background: #a0a0a0;
+    border-radius: 15px;
+}
+
+.fuel-tank-1 {
+    top: 30px;
+    left: 30px;
+    background: #ffd966;
+}
+
+.fuel-tank-2 {
+    top: 30px;
+    right: 30px;
+    background: #ffd966;
+}
+
+.fuel-connector {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 20px;
+    background: #808080;
+    border-radius: 10px;
+}
+
+/* Система управления */
+.control-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: #d3f1ff;
+    border-radius: 15px;
+}
+
+.control-antennas {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 60px;
+    background: #ffffff;
+}
+
+.control-antennas::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -8px;
+    width: 20px;
+    height: 20px;
+    background: #ffd966;
+    border-radius: 50%;
+}
+
+
+.fairing-left, .fairing-right {
+    position: absolute;
+    top: 20px;
+    width: 60px;
+    height: 120px;
+    background: #c0c0c0;
+    border-radius: 30px 30px 10px 10px;
+}
+
+.fairing-left {
+    left: 20px;
+    transform: rotate(-5deg);
+}
+
+.fairing-right {
+    right: 20px;
+    transform: rotate(5deg);
+}
+
+.fairing-cargo {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background: #ffd966;
+    border-radius: 10px;
+}
+
+/* ===== СЕКЦИЯ 2: КАЛЬКУЛЯТОР ===== */
+.rocket-calculator-section {
+    margin-top: 80px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fceec3; 
+    
+    border-radius: 50px;
+}
+
+.section-title {
+    font-size: 42px;
+    color: #fceec3; 
+    text-shadow: 0 0 20px rgba(255, 249, 217, 0.93); 
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Сетка 3x2 для калькулятора */
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    margin-bottom: 30px;
+}
+
+
+
+.calc-card {
+    margin-top: 20px;
+    min-height: 300px;
+    min-width: 500px;
+    color: white;
+    background: rgba(30, 144, 255, 0.1);  /* Серо-голубой */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.calc-card:hover {
+    background: rgba(30, 144, 255, 0.15);
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 100, 255, 0.2);
+}
+
+.calc-card h3 {
+    color: #f7e8bd;
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 217, 102, 0.3);
+    padding-bottom: 10px;
+}
+
+
+.calc-content label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #f0f0f0;
+    font-size: 16px;
+}
+
+
+
+.calc-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.slider-group {
+    width: 100%;
+}
+
+.slider-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: #f0f0f0;
+    font-size: 16px;
+}
+
+.slider-value {
+    color: #d3c59a;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Стили для ползунков (с префиксами) */
+.calc-content input[type="range"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 217, 102, 0.3);
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Ползунок для Chrome/Safari/Edge */
+.calc-content input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: #dfd5b7;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    margin-top: -8px;
+}
+
+/* Ползунок для Firefox */
+.calc-content input[type="range"]::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    background: #e2dbc5;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* Трек для Firefox */
+.calc-content input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 217, 102, 0.3);
+    border-radius: 10px;
+}
+
+/* Эффект при фокусе */
+.calc-content input[type="range"]:focus {
+    outline: none;
+}
+
+.calc-content input[type="range"]:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 15px #ffd966;
+}
+
+.calc-content input[type="range"]:focus::-moz-range-thumb {
+    box-shadow: 0 0 15px #ffd966;
+}
+
+/* Стили для select */
+.calc-content select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #ffd966;
+    color: #ffd966;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 5px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23ffd966' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+.result-box {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid rgba(255, 217, 102, 0.3);
+}
+
+.result-box span {
+    display: block;
+    color: #fceec3; 
+    text-shadow: 0 0 20px rgba(255, 249, 217, 0.93); 
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.result-box small {
+    color: #a0a0a0;
+    font-size: 12px;
+}
+
+.calculator-footer {
+    text-align: center;
+    color: #808080;
+    font-size: 14px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===========================================
+   КНОПКА "НАВЕРХ" - ПОЯВЛЯЕТСЯ ПРИ ПРОКРУТКЕ
+   =========================================== */
+
+.back-to-top {
+    position: fixed;           /* Привязана к окну */
+    bottom: 30px;              /* Отступ снизу */
+    right: 30px;               /* Отступ справа */
+    width: 50px;               /* Размер кнопки */
+    height: 50px;
+    border-radius: 50%;        /* Круглая */
+    background: rgba(255, 255, 255, 0.7);  /* Полупрозрачный белый */
+    border: 2px solid #ffd966; /* Золотая окантовка (как у тебя в стиле) */
+    color: #ffd966;            /* Золотая стрелка */
+    font-size: 30px;           /* Размер стрелки */
+    font-weight: bold;
+    cursor: pointer;
+    display: none;             /* По умолчанию скрыта */
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;             /* Поверх всего */
+    transition: all 0.3s ease; /* Плавные изменения */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    line-height: 1;
+    padding: 0;
+}
+
+/* При наведении - ярче */
+.back-to-top:hover {
+    background: rgba(255, 255, 255, 0.95);
+    transform: scale(1.1);      /* Чуть увеличивается */
+    box-shadow: 0 6px 20px rgba(255, 217, 102, 0.5);
+
+}

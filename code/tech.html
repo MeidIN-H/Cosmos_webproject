@@ -1,0 +1,283 @@
+ <!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset ="utf-8">
+        <title> 
+            Space step!
+        </title>
+    </head>
+
+<body>
+    <header>
+            <nav class="navigation">
+                <a href="idex.html" class="nav-button">Главная</a>
+                <a href="astronomy.html" class="nav-button">Астрономия</a>
+                <a href="tech.html" class="nav-button">Техника</a>
+                <a href="physics.html" class="nav-button">Конструкция</a>
+            </nav>
+        </header>
+
+    <main class="space-agencies-page">
+    
+    <!-- ===== ЗЕМЛЯ С ЛУНОЙ И ЛОГОТИПАМИ ПО БОКАМ ===== -->
+<section class="earth-moon-section">
+    <div class="earth-moon-container">
+        
+        <!-- Левая картинка (Роскосмос) -->
+        <div class="side-image1 left-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Roscosmos_logo.svg/200px-Roscosmos_logo.svg.png" 
+                 alt="Роскосмос" 
+                 class="side-img"
+                 title="Роскосмос - Государственная корпорация по космической деятельности">
+        </div>
+
+        <!-- Правая картинка (NASA) -->
+        <div class="side-image1 right-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/200px-NASA_logo.svg.png" 
+                 alt="NASA" 
+                 class="side-img"
+                 title="NASA - National Aeronautics and Space Administration">
+        </div>
+
+        <!-- Земля -->
+        <div class="earth1">
+            <div class="earth-continent earth-continent-1"></div>
+            <div class="earth-continent earth-continent-2"></div>
+            <div class="earth-continent earth-continent-3"></div>
+            <div class="earth-continent earth-continent-4"></div>
+            <div class="earth-ice north-pole"></div>
+            <div class="earth-ice south-pole"></div>
+        </div>
+        
+        <!-- Круговая орбита с луной -->
+        <div class="moon-orbit">
+            <div class="moon"></div>
+        </div>
+        
+        
+        
+    </div>
+</section>
+    
+    <!-- ===== 2. ДВА СТОЛБЦА: РОСКОСМОС И NASA ===== -->
+    <div class="agencies-two-columns">
+        
+        <!-- ЛЕВЫЙ СТОЛБЕЦ - РОСКОСМОС -->
+        <div class="agency-column left-agency">
+            <h2 class="agency-title">РОСКОСМОС</h2>
+            
+            <!-- СЕКЦИЯ 1: История компании -->
+            <div class="agency-section">
+                <!-- Галерея слева -->
+                <div class="section-gallery left-gallery">
+                    <div class="gallery-container" id="roscosmos-history-gallery">
+                        <!-- Фото 1 -->
+                        <div class="gallery-item">
+                            <img src="https://via.placeholder.com/150x150?text=Королев" alt="Сергей Королев" class="gallery-image">
+                            <div class="image-caption" data-person="korolev">Сергей Королев</div>
+                            <!-- Попап (появляется под подписью) -->
+                            <div class="person-popup" id="popup-korolev">
+                                <p>Сергей Павлович Королев — главный конструктор, основоположник практической космонавтики.</p>
+                                <p>1907-1966</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Фото 2 -->
+                        <div class="gallery-item">
+                            <img src="https://via.placeholder.com/150x150?text=Гагарин" alt="Юрий Гагарин" class="gallery-image">
+                            <div class="image-caption" data-person="gagarin">Юрий Гагарин</div>
+                            <div class="person-popup" id="popup-gagarin">
+                                <p>Юрий Алексеевич Гагарин — первый человек в космосе.</p>
+                                <p>1934-1968</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Фото 3 -->
+                        <div class="gallery-item">
+                            <img src="https://via.placeholder.com/150x150?text=Циолковский" alt="Константин Циолковский" class="gallery-image">
+                            <div class="image-caption" data-person="ciolkovsky">К. Циолковский</div>
+                            <div class="person-popup" id="popup-ciolkovsky">
+                                <p>Константин Эдуардович Циолковский — основоположник теоретической космонавтики.</p>
+                                <p>1857-1935</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Стрелки для листания галереи -->
+                    <button class="gallery-arrow left-arrow">←</button>
+                    <button class="gallery-arrow right-arrow">→</button>
+                </div>
+                
+                <!-- Текст справа -->
+                <div class="section-text right-text">
+                    <h3>История Роскосмоса</h3>
+                    <p>Роскосмос — государственная корпорация, образованная в 1992 году. Наследует советской космической программе, начатой в 1950-х годах.</p>
+                    <p>Под руководством Сергея Королева были созданы первые спутники и корабли "Восток".</p>
+                </div>
+            </div>
+            
+            <!-- СЕКЦИЯ 2: Ракеты и спутники -->
+            <div class="agency-section">
+                <!-- Галерея слева -->
+                <div class="section-gallery left-gallery">
+                    <div class="gallery-container" id="roscosmos-rockets-gallery">
+                        <!-- Фото 1 -->
+                        <div class="gallery-item">
+                            <img src="https://via.placeholder.com/150x150?text=Восток" alt="Ракета Восток" class="gallery-image">
+                            <div class="image-caption" data-rocket="vostok">Ракета "Восток"</div>
+                            <div class="rocket-popup" id="popup-vostok">
+                                <p>Ракета-носитель "Восток" — доставила в космос первого человека.</p>
+                                <p>Высота: 38 м | Грузоподъемность: 4.7 т</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Фото 2 -->
+                        <div class="gallery-item">
+                            <img src="https://via.placeholder.com/150x150?text=Спутник" alt="Спутник-1" class="gallery-image">
+                            <div class="image-caption" data-rocket="sputnik">Спутник-1</div>
+                            <div class="rocket-popup" id="popup-sputnik">
+                                <p>Первый искусственный спутник Земли. Запущен 4 октября 1957 года.</p>
+                                <p>Вес: 83.6 кг</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Фото 3 -->
+                        <div class="gallery-item">
+                            <img src="https://via.placeholder.com/150x150?text=Протон" alt="Протон" class="gallery-image">
+                            <div class="image-caption" data-rocket="proton">Ракета "Протон"</div>
+                            <div class="rocket-popup" id="popup-proton">
+                                <p>Тяжелая ракета-носитель для вывода грузов на орбиту.</p>
+                                <p>Эксплуатируется с 1965 года</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Стрелки для листания -->
+                    <button class="gallery-arrow left-arrow">←</button>
+                    <button class="gallery-arrow right-arrow">→</button>
+                </div>
+                
+                <!-- Текст справа -->
+                <div class="section-text right-text">
+                    <h3>Ракеты и спутники</h3>
+                    <p>От первого "Спутника" до современных "Ангара" и "Союз".</p>
+                    <p>Роскосмос разработал более 20 типов ракет-носителей и тысячи спутников.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ПРАВЫЙ СТОЛБЕЦ - NASA (ЗЕРКАЛЬНО) -->
+        <div class="agency-column right-agency">
+            <h2 class="agency-title">🇺🇸 NASA</h2>
+            
+            <!-- СЕКЦИЯ 1: История компании -->
+            <div class="agency-section mirror">
+                <!-- Текст слева -->
+                <div class="section-text left-text">
+                    <h3>История NASA</h3>
+                    <p>NASA основано в 1958 году в ответ на запуск советского спутника. Отвечало за программу "Аполлон" и высадку на Луну.</p>
+                    <p>Сейчас разрабатывает программу Artemis для возвращения на Луну.</p>
+                </div>
+                
+                <!-- Галерея справа -->
+                <div class="section-gallery right-gallery">
+                    <div class="gallery-container" id="nasa-history-gallery">
+                        <!-- Фото 1 -->
+                        <div class="gallery-item">
+                            <img src="https://via.placeholder.com/150x150?text=vonBraun" alt="Вернер фон Браун" class="gallery-image">
+                            <div class="image-caption" data-person="vonBraun">Вернер фон Браун</div>
+                            <div class="person-popup" id="popup-vonBraun">
+                                <p>Вернер фон Браун — главный конструктор ракет Saturn V.</p>
+                                <p>1912-1977</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Фото 2 -->
+                        <div class="gallery-item">
+                            <img src="https://via.placeholder.com/150x150?text=Armstrong" alt="Нил Армстронг" class="gallery-image">
+                            <div class="image-caption" data-person="armstrong">Нил Армстронг</div>
+                            <div class="person-popup" id="popup-armstrong">
+                                <p>Первый человек на Луне (1969).</p>
+                                <p>1930-2012</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Фото 3 -->
+                        <div class="gallery-item">
+                            <img src="https://via.placeholder.com/150x150?text=Glenn" alt="Джон Гленн" class="gallery-image">
+                            <div class="image-caption" data-person="glenn">Джон Гленн</div>
+                            <div class="person-popup" id="popup-glenn">
+                                <p>Первый американец на орбите (1962).</p>
+                                <p>1921-2016</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Стрелки -->
+                    <button class="gallery-arrow left-arrow">←</button>
+                    <button class="gallery-arrow right-arrow">→</button>
+                </div>
+            </div>
+            
+            <!-- СЕКЦИЯ 2: Ракеты и спутники -->
+            <div class="agency-section mirror">
+                <!-- Текст слева -->
+                <div class="section-text left-text">
+                    <h3>Ракеты и спутники</h3>
+                    <p>Saturn V — самая мощная ракета, доставившая людей на Луну.</p>
+                    <p>Space Shuttle — первый многоразовый корабль. Сейчас разрабатывается SLS.</p>
+                </div>
+                
+                <!-- Галерея справа -->
+                <div class="section-gallery right-gallery">
+                    <div class="gallery-container" id="nasa-rockets-gallery">
+                        <!-- Фото 1 -->
+                        <div class="gallery-item">
+                            <img src="https://via.placeholder.com/150x150?text=SaturnV" alt="Saturn V" class="gallery-image">
+                            <div class="image-caption" data-rocket="saturnV">Saturn V</div>
+                            <div class="rocket-popup" id="popup-saturnV">
+                                <p>Ракета для программы "Аполлон". Высота: 110 м.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Фото 2 -->
+                        <div class="gallery-item">
+                            <img src="https://via.placeholder.com/150x150?text=Shuttle" alt="Space Shuttle" class="gallery-image">
+                            <div class="image-caption" data-rocket="shuttle">Space Shuttle</div>
+                            <div class="rocket-popup" id="popup-shuttle">
+                                <p>Первый многоразовый космический корабль.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Фото 3 -->
+                        <div class="gallery-item">
+                            <img src="https://via.placeholder.com/150x150?text=Webb" alt="James Webb" class="gallery-image">
+                            <div class="image-caption" data-rocket="webb">James Webb</div>
+                            <div class="rocket-popup" id="popup-webb">
+                                <p>Космический телескоп, запущен в 2021 году.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Стрелки -->
+                    <button class="gallery-arrow left-arrow">←</button>
+                    <button class="gallery-arrow right-arrow">→</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</main>
+
+
+
+
+
+    <footer>
+        <p>Made by MeidinH</p>
+    </footer>
+
+    <!-- КНОПКА "НАВЕРХ" -->
+<button id="backToTop" class="back-to-top" aria-label="Наверх">↑</button>
+</body>
