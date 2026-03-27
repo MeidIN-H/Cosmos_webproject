@@ -72,156 +72,181 @@ document.addEventListener('DOMContentLoaded', function() {
                 'https://cdn.sportmaster.ru/upload/content/mediahab/prod/bc27ac57-9c19-4a85-b099-1c8c4b6aa0f8.jpg'
 
 
-// ===========================================
-// ПЛАНЕТЫ С ГАЛЕРЕЕЙ - ИСПРАВЛЕННАЯ ВЕРСИЯ
-// ===========================================
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Данные для планет с фотографиями
+   
     const planetsData = {
-        sun: {
-            name: 'Солнце',
-            desc: 'Звезда, вокруг которой вращается наша планетная система.',
-            photos: [
-                'https://solarsystem.nasa.gov/system/resources/detail_files/2482_Sun_PIA16211_200.jpg',
-                'https://solarsystem.nasa.gov/system/resources/detail_files/2483_Sun_PIA16212_200.jpg',
-                'https://solarsystem.nasa.gov/system/resources/detail_files/2484_Sun_PIA16213_200.jpg'
-            ],
-            details: [
-                'Диаметр: 1,392,700 км',
-                'Температура: 5,500°C',
-                'Возраст: 4.6 млрд лет',
-                'Состав: Водород (73%), Гелий (25%)'
-            ]
-        },
-        mercury: {
-            name: 'Меркурий',
-            desc: 'Ближайшая к Солнцу планета.',
-            photos: [
-                'https://solarsystem.nasa.gov/system/resources/detail_files/772_mercury_480x320.jpg',
-                'https://solarsystem.nasa.gov/system/resources/detail_files/773_Mercury_M10_200.jpg',
-                'https://solarsystem.nasa.gov/system/resources/detail_files/774_Mercury_M11_200.jpg'
-            ],
-            details: [
-                'Диаметр: 4,879 км',
-                'Расстояние: 57.9 млн км',
-                'Температура: +430°C днём, -180°C ночью',
-                'Спутники: нет'
-            ]
-        },
-        venus: {
-            name: 'Венера',
-            desc: 'Самая горячая планета.',
-            photos: [
-                'https://solarsystem.nasa.gov/system/resources/detail_files/773_venus_480x320.jpg',
-                'https://solarsystem.nasa.gov/system/resources/detail_files/774_Venus_V1_200.jpg',
-                'https://solarsystem.nasa.gov/system/resources/detail_files/775_Venus_V2_200.jpg'
-            ],
-            details: [
-                'Диаметр: 12,104 км',
-                'Расстояние: 108.2 млн км',
-                'Температура: +462°C',
-                'Атмосфера: CO2',
-                'Спутники: нет'
-            ]
-        },
-        earth: {
-            name: 'Земля',
-            desc: 'Наш дом. Единственная планета с жизнью.',
-            photos: [
-                'https://cdn.sportmaster.ru/upload/content/mediahab/prod/bc27ac57-9c19-4a85-b099-1c8c4b6aa0f8.jpg',
-                'https://cdn.sportmaster.ru/upload/content/mediahab/prod/bc27ac57-9c19-4a85-b099-1c8c4b6aa0f8.jpg',
-                'https://cdn.sportmaster.ru/upload/content/mediahab/prod/bc27ac57-9c19-4a85-b099-1c8c4b6aa0f8.jpg'
-            ],
-            details: [
-                'Диаметр: 12,742 км',
-                'Расстояние: 149.6 млн км',
-                'Спутник: Луна',
-                'Вода: 71% поверхности'
-            ]
-        },
-        mars: {
-            name: 'Марс',
-            desc: 'Красная планета.',
-            photos: [
-                'https://solarsystem.nasa.gov/system/resources/detail_files/780_mars_480x320.jpg',
-                'https://solarsystem.nasa.gov/system/resources/detail_files/781_mars_480x320_2.jpg',
-                'https://solarsystem.nasa.gov/system/resources/detail_files/782_mars_480x320_3.jpg'
-            ],
-            details: [
-                'Диаметр: 6,779 км',
-                'Расстояние: 227.9 млн км',
-                'Спутники: Фобос, Деймос',
-                'Горы: Олимп (самая высокая)'
-            ]
-        },
-        jupiter: {
-            name: 'Юпитер',
-            desc: 'Самая большая планета.',
-            photos: [
-                'https://solarsystem.nasa.gov/system/resources/detail_files/776_jupiter_480x320.jpg',
-                'https://solarsystem.nasa.gov/system/resources/detail_files/777_jupiter_480x320_2.jpg',
-                'https://solarsystem.nasa.gov/system/resources/detail_files/778_jupiter_480x320_3.jpg'
-            ],
-            details: [
-                'Диаметр: 139,820 км',
-                'Расстояние: 778.5 млн км',
-                'Спутники: Ио, Европа, Ганимед, Каллисто',
-                'Большое красное пятно'
-            ]
-        },
-        saturn: {
-            name: 'Сатурн',
-            desc: 'Имеет красивые кольца.',
-            photos: [
-                'https://solarsystem.nasa.gov/system/resources/detail_files/777_saturn_480x320.jpg',
-                'https://solarsystem.nasa.gov/system/resources/detail_files/778_saturn_480x320_2.jpg',
-                'https://solarsystem.nasa.gov/system/resources/detail_files/779_saturn_480x320_3.jpg'
-            ],
-            details: [
-                'Диаметр: 116,460 км',
-                'Расстояние: 1.43 млрд км',
-                'Спутники: Титан, Рея, Япет',
-                'Кольца: изо льда и пыли'
-            ]
-        },
-        uranus: {
-            name: 'Уран',
-            desc: 'Ледяной гигант. Вращается на боку.',
-            photos: [
-                'https://solarsystem.nasa.gov/system/resources/detail_files/778_uranus_480x320.jpg',
-                'https://solarsystem.nasa.gov/system/resources/detail_files/779_uranus_480x320_2.jpg',
-                'https://solarsystem.nasa.gov/system/resources/detail_files/780_uranus_480x320_3.jpg'
-            ],
-            details: [
-                'Диаметр: 50,724 км',
-                'Расстояние: 2.87 млрд км',
-                'Спутники: Титания, Оберон, Умбриэль',
-                'Температура: -224°C'
-            ]
-        },
-        neptune: {
-            name: 'Нептун',
-            desc: 'Самая ветреная планета.',
-            photos: [
-                'https://solarsystem.nasa.gov/system/resources/detail_files/779_neptune_480x320.jpg',
-                'https://solarsystem.nasa.gov/system/resources/detail_files/780_neptune_480x320_2.jpg',
-                'https://solarsystem.nasa.gov/system/resources/detail_files/781_neptune_480x320_3.jpg'
-            ],
-            details: [
-                'Диаметр: 49,244 км',
-                'Расстояние: 4.5 млрд км',
-                'Спутники: Тритон, Нереида',
-                'Скорость ветра: 2100 км/ч'
-            ]
-        }
-    };
+    sun: {
+        name: 'Солнце',
+        desc: 'Солнце — звезда, центр нашей системы. Это гигантский ядерный реактор, дающий жизнь Земле. В нём содержится 99.86% всей массы Солнечной системы. Температура ядра — 15 млн °C, а энергии, которую оно выделяет за секунду, хватило бы человечеству на миллион лет.',
+        photos: [
+            'https://img.freepik.com/premium-photo/sun-shining-through-clouds_1048944-28774661.jpg?semt=ais_hybrid&w=740',
+            'https://avatars.mds.yandex.net/i?id=15988dd243402eb67b1453059b859292_l-12753003-images-thumbs&n=13',
+            'https://xras.ru/database/sun_images/2024/suvi304/202412/20241223_180400_suvi304.jpg'
+        ],
+        details: [
+            'Тип: Жёлтый карлик (G2V)',
+            'Диаметр: 1.39 млн км',
+            'Температура поверхности: 5,500°C',
+            'Температура ядра: 15 млн °C',
+            'Возраст: 4.6 млрд лет',
+            'Состав: 73% водород, 25% гелий',
+            'Особенность: Содержит 99.86% массы системы'
+        ]
+    },
+    mercury: {
+        name: 'Меркурий',
+        desc: 'Самая быстрая планета, ближайшая к Солнцу. Днём здесь +427°C, ночью — -173°C — самый резкий перепад температур в системе. Год длится 88 дней, а сутки — 59. Поверхность покрыта кратерами, как у Луны.',
+        photos: [
+            'https://avatars.mds.yandex.net/i?id=24eb276eaeb9088f9695010e54ca8669_l-12752501-images-thumbs&n=13',
+            'https://ir.ozone.ru/s3/seller-promo-events/uploads/c1200/Sistema_Merkurij_statya_26a8dcb0d3.png',
+            'https://cdnn21.img.ria.ru/images/92931/81/929318165_0:0:1920:1080_1920x0_80_0_0_7e3c6c42d362a64719b22a021750fc7c.jpg'
+        ],
+        details: [
+            'Диаметр: 4,879 км',
+            'Расстояние: 57.9 млн км',
+            'Год: 88 земных дней',
+            'Сутки: 59 земных дней',
+            'Спутники: нет',
+            'Температура: -173°C ... +427°C',
+            'Особенность: Самый резкий перепад температур'
+        ]
+    },
+    venus: {
+        name: 'Венера',
+        desc: 'Самая горячая планета (+462°C). Плотная атмосфера из углекислого газа и облака серной кислоты создают адский парниковый эффект. Давление в 92 раза выше земного. Вращается в обратную сторону — Солнце там восходит на западе.',
+        photos: [
+            'https://s.yimg.com/ny/api/res/1.2/w.oHrnP_.sfWXiWSptAPuA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTU0MDtjZj13ZWJw/https://media.zenfs.com/en/space_311/39232f47b5844fcdaded61ef8d7bec73',
+            'https://img.freepik.com/premium-photo/venus-planet-isolated-transparent-background_995162-5563.jpg?semt=ais_hybrid',
+            'https://avatars.mds.yandex.net/i?id=83f92ecd58c8b03caadf4831e07e3c35_l-5244939-images-thumbs&n=13'
+        ],
+        details: [
+            'Диаметр: 12,104 км',
+            'Расстояние: 108.2 млн км',
+            'Год: 225 земных дней',
+            'Сутки: 243 земных дня',
+            'Спутники: нет',
+            'Температура: +462°C',
+            'Особенность: Вращается в обратную сторону'
+        ]
+    },
+    earth: {
+        name: 'Земля',
+        desc: 'Наш дом. Единственная известная планета с жизнью. 71% поверхности покрыто водой. Уникальная атмосфера и магнитное поле защищают нас от космической радиации. Луна стабилизирует наклон оси, обеспечивая смену сезонов.',
+        photos: [
+            'https://avatars.mds.yandex.net/i?id=0cfeb3cdbaeb39ae9a286288f965157d_l-4275191-images-thumbs&n=13',
+            'https://avatars.mds.yandex.net/i?id=2189180d42896123b6fba98161b98e76_l-4510207-images-thumbs&n=13',
+            'https://media.istockphoto.com/id/1277760130/ru/фото/голубая-планета-земля-глобус-вид-из-космоса-элементы-этого-изображения-предоставлены-наса-3d.jpg?s=612x612&w=0&k=20&c=E0lfkNrUlDuz81wsfnKtXm_M8y7EmWPLX1c-ju6tI8w='
+        ],
+        details: [
+            'Диаметр: 12,742 км',
+            'Расстояние: 149.6 млн км',
+            'Год: 365.25 дней',
+            'Сутки: 24 часа',
+            'Спутники: 1 (Луна)',
+            'Температура: -89°C ... +58°C',
+            'Особенность: Единственная планета с жидкой водой на поверхности'
+        ]
+    },
+    mars: {
+        name: 'Марс',
+        desc: 'Красная планета из-за оксида железа в грунте. Здесь находится высочайшая гора в системе — вулкан Олимп (21 км). Атмосфера разрежена, вода есть под землёй в виде льда. Главная цель для поисков жизни и будущей колонизации.',
+        photos: [
+            'https://avatars.mds.yandex.net/i?id=3cb7369ea0dc3c1687b6c8cdfc29e599_l-10743754-images-thumbs&n=13',
+            'https://avatars.mds.yandex.net/i?id=da59f0fb701169c6498cee05beab2c51_l-5116917-images-thumbs&n=13',
+            'https://i.pinimg.com/originals/78/46/cb/7846cbfd11f0300220724afe5ce22511.jpg'
+        ],
+        details: [
+            'Диаметр: 6,779 км',
+            'Расстояние: 227.9 млн км',
+            'Год: 687 земных дней',
+            'Сутки: 24.6 часа',
+            'Спутники: 2 (Фобос, Деймос)',
+            'Температура: -140°C ... +20°C',
+            'Особенность: Высочайшая гора — Олимп (21 км)'
+        ]
+    },
+    jupiter: {
+        name: 'Юпитер',
+        desc: 'Король планет. В 2.5 раза массивнее всех остальных планет вместе взятых. Газовый гигант без твёрдой поверхности. Знаменитое Большое красное пятно — гигантский шторм, бушующий уже 300 лет. 95 спутников, включая вулканическую Ио и ледяную Европу.',
+        photos: [
+            'https://upload.wikimedia.org/wikipedia/commons/5/5c/Jupiter_Globe.jpg',
+            'https://img.freepik.com/premium-photo/yupiter-planet-chaos_1176913-24013.jpg',
+            'https://www.worldatlas.com/r/w768/upload/f6/9e/37/adobestock-283753187-1.jpeg'
+        ],
+        details: [
+            'Диаметр: 139,820 км',
+            'Расстояние: 778.5 млн км',
+            'Год: 11.86 земных лет',
+            'Сутки: 9.9 часа',
+            'Спутники: 95',
+            'Температура: -110°C',
+            'Особенность: Большое красное пятно — шторм размером с Землю'
+        ]
+    },
+    saturn: {
+        name: 'Сатурн',
+        desc: 'Планета с самыми красивыми кольцами изо льда и камня. Плотность меньше плотности воды — плавал бы в океане. 146 спутников, среди которых Титан (с атмосферой и метановыми озёрами) и Энцелад (с гейзерами солёной воды).',
+        photos: [
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Saturn_during_Equinox.jpg/1280px-Saturn_during_Equinox.jpg',
+            'https://img.freepik.com/premium-photo/saturn-from-perspective-its-rings_425671-4593.jpg?semt=ais_hybrid&w=740',
+            'https://i.pinimg.com/originals/89/6f/d8/896fd83bdd5e106c0f8f5c499533c13a.jpg'
+        ],
+        details: [
+            'Диаметр: 116,460 км',
+            'Расстояние: 1.434 млрд км',
+            'Год: 29.45 земных лет',
+            'Сутки: 10.5 часа',
+            'Спутники: 146',
+            'Температура: -140°C',
+            'Особенность: Плотность меньше плотности воды'
+        ]
+    },
+    uranus: {
+        name: 'Уран',
+        desc: 'Ледяной гигант, вращающийся "лёжа на боку" — наклон оси 98°. Из-за этого день на полюсе длится 42 года. Первая планета, открытая с помощью телескопа (1781 год). Бледно-голубой цвет — от метана в атмосфере.',
+        photos: [
+            'https://avatars.mds.yandex.net/i?id=a3416f557d5a35813147b46aee779348_l-4835514-images-thumbs&n=13',
+            'https://avatars.mds.yandex.net/i?id=75fa86e22f9344fb05eea3e3423525a01e1d5ca4-5221012-images-thumbs&n=13',
+            'https://ab-news.ru/wp-content/uploads/2022/07/35687b575u76u7vjvjuran.jpg'
+        ],
+        details: [
+            'Диаметр: 50,724 км',
+            'Расстояние: 2.871 млрд км',
+            'Год: 84 земных года',
+            'Сутки: 17.2 часа',
+            'Спутники: 27',
+            'Температура: -195°C',
+            'Особенность: Вращается "лёжа на боку"'
+        ]
+    },
+    neptune: {
+        name: 'Нептун',
+        desc: 'Самая ветреная планета — ветер до 2100 км/ч. Глубокий синий цвет. Единственная планета, открытая математически "на кончике пера" (1846 год). Спутник Тритон вращается в обратную сторону и, возможно, захвачен из пояса Койпера.',
+        photos: [
+            'https://img.freepik.com/premium-photo/neptune-space-background-elements-this-image-furnished-by-nasa_1347512-2526.jpg?semt=ais_hybrid&w=740',
+            'https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_685e519705ab543f9c4e653f_685e541605ab543f9c522844/scale_1200',
+            'https://avatars.mds.yandex.net/i?id=3b3ca81d8d70174c5a274e8e5536161c_l-10727469-images-thumbs&n=13'
+        ],
+        details: [
+            'Диаметр: 49,244 км',
+            'Расстояние: 4.495 млрд км',
+            'Год: 165 земных лет',
+            'Сутки: 16.1 часа',
+            'Спутники: 14',
+            'Температура: -200°C',
+            'Особенность: Самая высокая скорость ветра — до 2100 км/ч'
+        ]
+    }
+};
+
+  
     
-    // Удаляем старые попапы
+
     document.querySelectorAll('.planet-popup').forEach(p => p.remove());
     
-    // Создаем новые попапы с галереей
+
     for (let planetId in planetsData) {
         const data = planetsData[planetId];
         
@@ -229,28 +254,28 @@ document.addEventListener('DOMContentLoaded', function() {
         popup.className = 'popup planet-popup';
         popup.id = `${planetId}Popup`;
         popup.style.display = 'none';
-        popup.setAttribute('data-planet', planetId); // Добавляем атрибут для отладки
+        popup.setAttribute('data-planet', planetId); 
         
         let detailsHTML = '';
         data.details.forEach(detail => {
             detailsHTML += `<p>${detail}</p>`;
         });
         
-        // Создаем HTML для галереи
+
         let galleryHTML = '<div class="gallery-images">';
         data.photos.forEach((photo, index) => {
             galleryHTML += `<img src="${photo}" alt="${data.name}" class="gallery-image ${index === 0 ? 'active' : ''}" data-index="${index}">`;
         });
         galleryHTML += '</div>';
         
-        // Создаем точки-индикаторы
+  
         let dotsHTML = '<div class="gallery-dots">';
         data.photos.forEach((_, index) => {
             dotsHTML += `<div class="gallery-dot ${index === 0 ? 'active' : ''}" data-index="${index}"></div>`;
         });
         dotsHTML += '</div>';
         
-        // Эмодзи для планеты
+      
         const emoji = planetId === 'sun' ? '☀️' : '🪐';
         
         popup.innerHTML = `
@@ -277,14 +302,14 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(popup);
     }
     
-    // Функция для переключения фото в галерее
+
     function switchGalleryImage(popup, direction) {
         const galleryImages = popup.querySelectorAll('.gallery-image');
         const galleryDots = popup.querySelectorAll('.gallery-dot');
         
         if (galleryImages.length === 0) return;
         
-        // Находим текущее активное фото
+    
         let currentIndex = 0;
         galleryImages.forEach((img, index) => {
             if (img.classList.contains('active')) {
@@ -292,30 +317,30 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Вычисляем новый индекс
+       
         let newIndex;
         if (direction === 'next') {
             newIndex = (currentIndex + 1) % galleryImages.length;
         } else if (direction === 'prev') {
             newIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
         } else {
-            // Переключение по точке
+          
             newIndex = direction;
         }
         
-        // Обновляем классы у фото
+
         galleryImages.forEach(img => img.classList.remove('active'));
         galleryImages[newIndex].classList.add('active');
         
-        // Обновляем точки
+    
         galleryDots.forEach(dot => dot.classList.remove('active'));
         galleryDots[newIndex].classList.add('active');
         
-        // Для отладки
+      
         console.log(`Переключено на фото ${newIndex + 1} из ${galleryImages.length}`);
     }
     
-    // НАВЕШИВАЕМ ОБРАБОТЧИКИ НА СТРЕЛКИ (ПРЯМОЕ НАЗНАЧЕНИЕ)
+ 
     function setupGalleryControls(popup) {
         const leftArrow = popup.querySelector('.gallery-arrow.left');
         const rightArrow = popup.querySelector('.gallery-arrow.right');
@@ -353,12 +378,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Применяем обработчики ко всем попапам
+   
     document.querySelectorAll('.planet-popup').forEach(popup => {
         setupGalleryControls(popup);
     });
     
-    // Функция для позиционирования попапа рядом с планетой
+  
     function positionPopupNearPlanet(popup, planetElement) {
         const planetRect = planetElement.getBoundingClientRect();
         const popupRect = popup.getBoundingClientRect();
@@ -382,7 +407,7 @@ document.addEventListener('DOMContentLoaded', function() {
         popup.style.transform = 'none';
     }
     
-    // Обработка кликов по планетам
+
     document.querySelectorAll('.planet').forEach(planet => {
         planet.addEventListener('click', function(e) {
             e.stopPropagation();
@@ -411,7 +436,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Закрытие по крестику
+
     document.querySelectorAll('.close-button').forEach(btn => {
         btn.addEventListener('click', function(e) {
             e.stopPropagation();
@@ -428,7 +453,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Закрытие при клике вне
+
     window.addEventListener('click', function(e) {
         if (!e.target.closest('.popup') && !e.target.closest('.planet')) {
             document.querySelectorAll('.popup').forEach(p => {
@@ -441,14 +466,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Предотвращаем закрытие при клике внутри
+
     document.querySelectorAll('.popup').forEach(popup => {
         popup.addEventListener('click', function(e) {
             e.stopPropagation();
         });
     });
     
-    // Обновление позиции при скролле
+
     window.addEventListener('scroll', function() {
         const activePopup = document.querySelector('.popup[style*="display: block"]');
         const activePlanet = document.querySelector('.planet.active');
@@ -477,34 +502,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// ===========================================
-// ЛОГИКА ДЛЯ СТРАНИЦЫ КОСМИЧЕСКИХ АГЕНТСТВ
-// ===========================================
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // ===== 1. ПОПАПЫ ПОД ПОДПИСЯМИ =====
-    // При клике на подпись показываем попап под ней
+
     document.querySelectorAll('.image-caption').forEach(caption => {
         caption.addEventListener('click', function(e) {
             e.stopPropagation();
             
-            // Находим попап внутри того же gallery-item
+
             const popup = this.closest('.gallery-item').querySelector('.person-popup, .rocket-popup');
             
             if (popup) {
-                // Скрываем все другие попапы
+  
                 document.querySelectorAll('.person-popup, .rocket-popup').forEach(p => {
                     p.style.display = 'none';
                 });
                 
-                // Показываем этот попап
+     
                 popup.style.display = 'block';
             }
         });
     });
     
-    // ===== 2. ЗАКРЫТИЕ ПОПАПОВ ПРИ КЛИКЕ ВНЕ =====
     document.addEventListener('click', function(e) {
         if (!e.target.closest('.image-caption')) {
             document.querySelectorAll('.person-popup, .rocket-popup').forEach(p => {
@@ -512,9 +532,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
-    
-    // ===== 3. ПЕРЕКЛЮЧЕНИЕ ГАЛЕРЕЙ =====
-    // Функция для переключения фото в конкретной галерее
+
     function setupGallery(galleryContainer, leftArrow, rightArrow) {
         const items = galleryContainer.querySelectorAll('.gallery-item');
         if (items.length === 0) return;
@@ -531,17 +549,16 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         
-        // Показываем первый
+    
         showItem(0);
         
-        // Листаем вперед
         rightArrow.addEventListener('click', function(e) {
             e.stopPropagation();
             currentIndex = (currentIndex + 1) % items.length;
             showItem(currentIndex);
         });
         
-        // Листаем назад
+
         leftArrow.addEventListener('click', function(e) {
             e.stopPropagation();
             currentIndex = (currentIndex - 1 + items.length) % items.length;
@@ -549,7 +566,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Настраиваем все галереи
+
     document.querySelectorAll('.gallery-container').forEach(container => {
         const gallery = container.closest('.section-gallery');
         if (!gallery) return;
@@ -562,7 +579,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // ===== 4. ЗАПОЛНЯЕМ РЕАЛЬНЫМИ ФОТО (ПОЗЖЕ) =====
+
     console.log('Страница космических агентств готова');
 });
 
@@ -570,42 +587,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-
-
-
-// // ===========================================
-// // КНОПКА "НАВЕРХ" - ПОЯВЛЯЕТСЯ ПРИ ПРОКРУТКЕ
-// // ===========================================
-
-// Функция для показа/скрытия кнопки
 function toggleBackToTopButton() {
     const button = document.getElementById('backToTop');
-    if (!button) return; // Если кнопки нет на странице - выходим
+    if (!button) return; 
     
-    // Если прокрутили больше 1000px - показываем, иначе скрываем
     if (window.scrollY > 100) {
-        button.style.display = 'flex';  // Используем flex, чтобы сохранить центрирование
+        button.style.display = 'flex';  
     } else {
         button.style.display = 'none';
     }
 }
 
-// Слушаем событие прокрутки
 window.addEventListener('scroll', toggleBackToTopButton);
 
-// Проверяем сразу при загрузке страницы
 toggleBackToTopButton();
 
-// Функция для плавного подъема наверх
 function scrollToTop() {
     window.scrollTo({
         top: 0,
-        behavior: 'smooth'  // Плавная прокрутка
+        behavior: 'smooth'  
     });
 }
 
-// Назначаем обработчик клика на кнопку
 document.addEventListener('DOMContentLoaded', function() {
     const button = document.getElementById('backToTop');
     if (button) {
@@ -613,8 +616,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Дополнительно: если хочешь, чтобы стрелка была золотой на белом фоне
-// (можно закомментировать, если оставил как выше)
 
 
 
@@ -635,14 +636,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// ===========================================
-// КАЛЬКУЛЯТОР - АБСОЛЮТНО РАБОЧАЯ ВЕРСИЯ
-// ===========================================
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🚀 Калькулятор запущен');
     
-    // ===== 1. ДАЛЬНОСТЬ ПОЛЕТА =====
    const speed = document.getElementById('speed-slider');
 const speedSpan = document.getElementById('speed-value');
 const angle = document.getElementById('angle-slider');
@@ -665,7 +664,6 @@ speed.addEventListener('input', updateAll);
 angle.addEventListener('input', updateAll);
 updateAll();
     
-    // ===== 2. СООТНОШЕНИЕ МАСС =====
     const rocketSlider = document.getElementById('rocket-mass-slider');
     const rocketSpan = document.getElementById('rocket-mass-value');
     const payloadSlider = document.getElementById('payload-mass-slider');
@@ -697,7 +695,6 @@ updateAll();
         updateMass();
     }
     
-   // === КОСМИЧЕСКАЯ СКОРОСТЬ (УЛУЧШЕННАЯ) ===
 const spdMass = document.getElementById('speed-mass-slider');
 const spdMassVal = document.getElementById('speed-mass-value');
 const cosmic = document.getElementById('cosmic-speed-select');
@@ -712,24 +709,20 @@ if (spdMass && spdMassVal && cosmic && spdRes) {
         const m = parseFloat(spdMass.value);
         const v = parseFloat(cosmic.value);
         
-        // Коэффициент сложности в зависимости от типа скорости
-        // Первая скорость - выход на орбиту
-        // Вторая - уход от Земли
-        // Третья - уход от Солнца
+        
         let difficultyFactor = 1.0;
         
-        if (v === 7.9) difficultyFactor = 1.0;      // Первая
-        else if (v === 11.2) difficultyFactor = 1.8; // Вторая (сложнее в 1.8 раза)
-        else if (v === 16.7) difficultyFactor = 3.2; // Третья (еще сложнее)
+        if (v === 7.9) difficultyFactor = 1.0;      
+        else if (v === 11.2) difficultyFactor = 1.8; 
+        else if (v === 16.7) difficultyFactor = 3.2; 
         
         const v_ms = v * 1000;
         const mass_kg = m * 1000;
         
-        // Учитываем сложность
+        
         const thrust_n = (mass_kg * v_ms / 600) * difficultyFactor;
         const thrust_kn = Math.round(thrust_n / 1000);
         
-        // Добавляем пояснение
         let speedType = '';
         if (v === 7.9) speedType = ' (орбита)';
         else if (v === 11.2) speedType = ' (уход от Земли)';
@@ -743,7 +736,6 @@ if (spdMass && spdMassVal && cosmic && spdRes) {
     updateSpeed();
 }
     
-    // ===== 4. ТОПЛИВНЫЙ РАСЧЕТ =====
     const fuelSlider = document.getElementById('fuel-distance-slider');
     const fuelSpan = document.getElementById('fuel-distance-value');
     const fuelSelect = document.getElementById('fuel-type-select');
@@ -758,14 +750,14 @@ if (spdMass && spdMassVal && cosmic && spdRes) {
             const distance = parseFloat(fuelSlider.value);
             const type = fuelSelect.value;
             
-            // Удельный импульс для разных топлив
+         
             const isp = {
                 'kerosene': 300,
                 'hydrogen': 450,
                 'solid': 250
             };
             
-            // Упрощенный расчет топлива
+    
             const fuelNeeded = Math.round(distance / isp[type] * 100);
             fuelResult.textContent = '≈ ' + fuelNeeded + ' тонн';
             
@@ -796,7 +788,7 @@ if (spdMass && spdMassVal && cosmic && spdRes) {
             const payload = parseFloat(rangePayload.value);
             const fuelType = rangeFuel.value;
             
-            // Защита от отрицательных значений
+  
             if (payload >= mass) {
                 rangeResult.textContent = '≈ ∞ (невозможно)';
                 return;
@@ -822,7 +814,7 @@ if (spdMass && spdMassVal && cosmic && spdRes) {
         updateRangeByMass();
     }
     
-    // === 6. НАГРЕВ ПРИ ВХОДЕ (НОВЫЙ БЛОК) ===
+
     const entrySpeed = document.getElementById('entry-speed-slider');
     const entrySpeedVal = document.getElementById('entry-speed-value');
     const entryAngle = document.getElementById('entry-angle-select');
