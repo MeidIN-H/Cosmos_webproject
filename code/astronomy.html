@@ -1,0 +1,399 @@
+ <!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset ="utf-8">
+        <title> 
+            Space step!
+        </title>
+
+            <!-- В head добавляем спрайты планет (упрощённые SVG) -->
+<svg style="display: none;">
+    <!-- Меркурий -->
+    <symbol id="mercury" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="45" fill="#8c7853"/>
+        <circle cx="35" cy="35" r="8" fill="#a58b6b"/>
+        <circle cx="65" cy="60" r="12" fill="#6b5e4a"/>
+    </symbol>
+    
+    <!-- Венера -->
+    <symbol id="venus" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="45" fill="#e6b800"/>
+        <ellipse cx="50" cy="40" rx="25" ry="15" fill="#cc9c00"/>
+        <circle cx="30" cy="60" r="8" fill="#b38600"/>
+    </symbol>
+    
+    <!-- Земля -->
+    <symbol id="earth" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="45" fill="#2e86c1"/>
+        <path d="M25 40 Q40 30, 55 35 Q70 40, 75 55 Q70 70, 50 70 Q30 70, 25 50 Z" fill="#27ae60"/>
+        <circle cx="60" cy="45" r="5" fill="#f1c40f"/>
+    </symbol>
+    
+    <!-- Марс -->
+    <symbol id="mars" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="45" fill="#c44c4c"/>
+        <ellipse cx="40" cy="40" rx="15" ry="10" fill="#a13d3d"/>
+        <circle cx="65" cy="60" r="8" fill="#8b3535"/>
+    </symbol>
+    
+    <!-- Юпитер -->
+    <symbol id="jupiter" viewBox="0 0 120 120">
+        <ellipse cx="60" cy="60" rx="50" ry="45" fill="#d2b48c"/>
+        <ellipse cx="45" cy="45" rx="20" ry="15" fill="#b89a7a"/>
+        <ellipse cx="80" cy="70" rx="25" ry="20" fill="#a58364"/>
+        <circle cx="35" cy="75" r="8" fill="#8b6f54"/>
+    </symbol>
+    
+    <!-- Сатурн -->
+    <symbol id="saturn" viewBox="0 0 140 120">
+        <ellipse cx="70" cy="60" rx="45" ry="40" fill="#e0b060"/>
+        <ellipse cx="55" cy="50" rx="15" ry="10" fill="#c49a6c"/>
+        <ellipse cx="85" cy="70" rx="20" ry="15" fill="#b3864a"/>
+        <!-- Кольца -->
+        <ellipse cx="70" cy="60" rx="70" ry="20" fill="none" stroke="#c0a878" stroke-width="5"/>
+        <ellipse cx="70" cy="60" rx="60" ry="15" fill="none" stroke="#a58b6b" stroke-width="4"/>
+    </symbol>
+    
+    <!-- Уран -->
+    <symbol id="uranus" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" fill="#a3c9f1"/>
+        <circle cx="30" cy="40" r="8" fill="#7fa5c7"/>
+        <circle cx="65" cy="60" r="10" fill="#5f8ab3"/>
+    </symbol>
+    
+    <!-- Нептун -->
+    <symbol id="neptune" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" fill="#4169e1"/>
+        <ellipse cx="40" cy="40" rx="12" ry="8" fill="#2e4da8"/>
+        <circle cx="65" cy="55" r="8" fill="#1a3a8c"/>
+    </symbol>
+</svg>
+
+    </head>
+
+<body>
+    <header >
+            <nav class="navigation">
+                <a href="index.html" class="nav-button">Главная</a>
+                <a href="astronomy.html" class="nav-button">Астрономия</a>
+                <a href="tech.html" class="nav-button">Техника</a>
+                <a href="physics.html" class="nav-button">Конструкция</a>
+            </nav>
+        </header>
+
+    <main style="margin-top: 120px;">
+        
+
+
+        <section class="section-star">
+            <h2 style="margin: 40px; margin-bottom: 20px; color: #ffffff; font-size: 40px;">Звезды рядом!</h2>
+            <div class="star-card">
+
+       
+        <div class="left-column1">
+            <h1 class="star-name">Сириус</h1>
+
+            <button class="star-button" id="infoButton">О звезде</button>
+
+            <div class="popup" id="infoPopup">
+                <p>Сириус A — самая яркая звезда на ночном небе. Она в 25 раз ярче Солнца и видна почти из любой точки Земли. Её яркость обусловлена не только высокой температурой, но и близостью к нам. Сириус A — молодая звезда по космическим меркам (около 240 миллионов лет), но она уже прошла половину своего жизненного пути.</p>
+                <h3>Характеристики Сириуса</h3>
+                <ul>
+    <li><strong>Созвездие:</strong> Большой Пёс</li>
+    <li><strong>Расстояние:</strong> 8.6 световых лет</li>
+    <li><strong>Видимая звёздная величина:</strong> -1.46</li>
+    <li><strong>Тип:</strong> Звезда главной последовательности (A1V)</li>
+    <li><strong>Температура:</strong> 9,940 K</li>
+    <li><strong>Масса:</strong> 2.02 массы Солнца</li>
+    <li><strong>Радиус:</strong> 1.71 радиуса Солнца</li>
+</ul>   
+                <button class="close-button">✖</button>
+            </div>
+        </div>
+
+
+        <div class="right-column1">
+            <img src="https://studfile.net/html/2706/1116/html_LW2h0_c15V.ouFX/htmlconvd-MjfRc9_html_d4f547f50fac570f.png" alt="Фотография звезды Сириус" class="star-image">
+
+
+            <button class="star-button" id="historyButton">История обнаружения</button>
+
+            <div class="popup" id="historyPopup">
+                <h3>История обнаружения Сириуса</h3>
+                <p style="font-size: 20px;">Сириус известен с древнейших времён. Древние египтяне связывали его с богиней Исидой и по его первому утреннему восходу предсказывали разлив Нила. В 1844 году немецкий астроном Фридрих Бессель предположил наличие у Сириуса невидимого спутника, гравитация которого влияет на движение звезды. В 1862 году Альван Грэм подтвердил это, открыв Сириус B — первый обнаруженный белый карлик.</p>
+                
+                <button class="close-button">✖</button>
+            </div>
+        </div>
+
+        
+    </div>
+            </div>
+
+
+ 
+            <div class="star-card">
+
+       
+        <div class="left-column1">
+            <h1 class="star-name">Бетельгейзе</h1>
+
+            <button class="star-button" id="infoButton">О звезде</button>
+
+            <div class="popup" id="infoPopup">
+                <p>Бетельгейзе — одна из крупнейших звезд, видимых невооруженным глазом. Это красный сверхгигант на финальной стадии эволюции. Она нестабильна: её размер и яркость постоянно меняются. В 2019–2020 годах звезда неожиданно потускнела на 60%, вызвав волну слухов о скором взрыве. Ученые выяснили, что это было облако пыли, выброшенное самой звездой. Бетельгейзе взорвется как сверхновая в ближайшие 100 000 лет — для астрономов это «со дня на день».</p>
+                <h3>Характеристики Бетельгейзе</h3>
+                <ul>
+    <li><strong>Созвездие:</strong> Орион</li>
+    <li><strong>Расстояние:</strong> ~640 световых лет</li>
+    <li><strong>Видимая звёздная величина:</strong> 0.42 (переменная)</li>
+    <li><strong>Тип:</strong> Красный сверхгигант (M1-M2 Ia-ab)</li>
+    <li><strong>Температура:</strong> ~3,600 K</li>
+    <li><strong>Масса:</strong> 10–20 масс Солнца</li>
+    <li><strong>Радиус:</strong> ~900–1,200 радиусов Солнца</li>
+</ul>
+                
+                <button class="close-button">✖</button>
+            </div>
+        </div>
+
+
+        <div class="right-column1">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Betelgeuse_IOTA.jpg" alt="Фотография звезды Бетельгейзе" class="star-image">
+
+
+            <button class="star-button" id="historyButton">История обнаружения</button>
+
+            <div class="popup" id="historyPopup">
+                <h3>История обнаружения Бетельгейзе</h3>
+                <p style="font-size: 20px;">Бетельгейзе известна с древности. Её название происходит от арабского «Yad al-Jauzā» («рука Ориона»), которое средневековые переписчики ошибочно превратили в «Bait al-Jauzā» («дом Ориона»). В 1920 году Альберт Майкельсон первым измерил её диаметр с помощью интерферометра, доказав, что это не просто точка, а огромный диск. В 2009 году телескоп Хаббл получил первые прямые изображения поверхности звезды с гигантскими конвекционными ячейками.</p>
+                
+                <button class="close-button">✖</button>
+            </div>
+        </div>
+    </div>
+
+
+            </div>
+            
+ 
+            <div class="star-card">
+
+       
+        <div class="left-column1">
+            <h1 class="star-name">Проксима Центавра</h1>
+
+            <button class="star-button" id="infoButton">О звезде</button>
+
+            <div class="popup" id="infoPopup">
+                <p>Проксима Центавра — ближайшая к Солнцу звезда. Она настолько тусклая, что её открыли только в 1915 году. Несмотря на скромные размеры, это самая важная звезда для будущих межзвездных путешествий. В 2016 году у неё обнаружили планету — Проксима Центавра b, которая находится в зоне обитаемости (теоретически на ней может существовать жидкая вода). Правда, из-за активности красного карлика условия там суровые: звезда часто выбрасывает мощные вспышки.</p>
+                <h3>Характеристики звезды</h3>
+                <ul>
+    <li><strong>Созвездие:</strong> Центавр</li>
+    <li><strong>Расстояние:</strong> 4.24 световых года</li>
+    <li><strong>Видимая звёздная величина:</strong> 11.05 (не видна без телескопа)</li>
+    <li><strong>Тип:</strong> Красный карлик (M5.5 Ve)</li>
+    <li><strong>Температура:</strong> ~3,050 K</li>
+    <li><strong>Масса:</strong> 0.12 массы Солнца</li>
+    <li><strong>Радиус:</strong> 0.14 радиуса Солнца</li>
+</ul>
+                <button class="close-button">✖</button>
+            </div>
+        </div>
+
+
+        <div class="right-column1">
+            <img src="https://static.wikia.nocookie.net/elite-dangerous/images/c/ca/AlphaCentauriProximaCentauri.png/revision/latest/scale-to-width-down/1200?cb=20151125045631" alt="Фотография звезды Проксима центавра" class="star-image">
+
+
+            <button class="star-button" id="historyButton">История обнаружения</button>
+
+            <div class="popup" id="historyPopup">
+                <h3>История обнаружения звезды</h3>
+                <p style="font-size: 20px;">В 1915 году шотландский астроном Роберт Иннес, работая в Южной Африке, сравнивал фотографии звездного неба, сделанные в разное время. Он заметил, что одна из звезд в системе Альфа Центавра немного сместилась относительно других. Это и была Проксима — «ближайшая». До этого считалось, что ближайшая звезда — Альфа Центавра A и B. Открытие Проксимы сделало её рекордсменом, и этот рекорд держится до сих пор.</p>
+                
+                <button class="close-button">✖</button>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- stars -->
+        </section>
+
+                <section class="section-star">
+                   <h2 style="margin: 40px; margin-bottom: 20px; color: #ffffff; font-size: 40px;">Черные дыры тоже!</h2>
+                    <div class="star-card">
+
+       
+        <div class="left-column1">
+            <h1 class="star-name">Лебедь х-1</h1>
+
+            <button class="star-button" id="infoButton">О дыре</button>
+
+            <div class="popup" id="infoPopup">
+                <p>Лебедь X-1 — первая черная дыра, существование которой было подтверждено научно. Она входит в двойную систему с огромной голубой звездой. Гравитация черной дыры «ворует» вещество у компаньона. Падающий газ разогревается до миллионов градусов и излучает мощнейшее рентгеновское излучение — именно по нему дыру и обнаружили. Лебедь X-1 вращается с огромной скоростью — почти 800 оборотов в секунду!</p>
+                <h3>Характеристики дыры</h3>
+                <ul>
+    <li><strong>Созвездие:</strong> Лебедь</li>
+    <li><strong>Расстояние:</strong> ~6,070 световых лет</li>
+    <li><strong>Тип:</strong> Черная дыра звездной массы</li>
+    <li><strong>Масса:</strong> ~21 масса Солнца</li>
+    <li><strong>Радиус горизонта событий:</strong> ~62 км</li>
+    <li><strong>Компаньон:</strong> Голубой сверхгигант HDE 226868 (масса ~40 Солнц)</li>
+    <li><strong>Скорость вращения:</strong> ~800 оборотов в секунду</li>
+</ul>
+                
+                <button class="close-button">✖</button>
+            </div>
+        </div>
+
+
+        <div class="right-column1">
+            <img src="https://static.life.ru/ip/unsafe/rs:fit:1200:/q:98/sh:0.5/czM6Ly9saWZlLXN0YXRpYy9wdWJsaWNhdGlvbnMvMjAyNC81LzIwLzc1MzQ3MDYxNDg2Ni43MDM3LndlYnA=.webp" alt="Фотография черной дыры" class="star-image">
+
+
+            <button class="star-button" id="historyButton">История обнаружения</button>
+
+            <div class="popup" id="historyPopup">
+                <h3>История обнаружения Бетельгейзе</h3>
+                <p style="font-size: 20px;">В 1964 году с помощью ракетных детекторов был обнаружен мощный источник рентгеновского излучения в созвездии Лебедя — его назвали Лебедь X-1. Долгое время шли споры: что это — черная дыра или нейтронная звезда? В 1974 году Стивен Хокинг и Кип Торн заключили знаменитое пари: Хокинг утверждал, что это не черная дыра, Торн — что черная дыра. В 1990 году, после накопления данных о массе невидимого объекта (более 3 масс Солнца), Хокинг признал поражение и подарил Торну годовую подписку на журнал Penthouse. Это пари сделало Лебедь X-1 легендой.</p>
+                
+                <button class="close-button">✖</button>
+            </div>
+        </div>
+    </div>
+
+
+            </div>
+
+</section>
+
+
+
+        <section class="section-star">
+            <!-- white holes -->
+
+             <h2 style="margin: 40px; margin-bottom: 20px; color: #ffffff; font-size: 40px;">И даже белые дыры!</h2>
+            <div class="star-card">
+
+       
+        <div class="left-column1">
+            <h1 class="star-name">Белая дыра (GRB 060614)</h1>
+            <button class="star-button" id="infoButton">О дыре</button>
+
+            <div class="popup" id="infoPopup">
+                <p>Белые дыры — это гипотетические объекты, «противоположность» черным дырам. Если черная дыра затягивает всё внутрь, из белой дыры, по теории, только вылетает материя. Они существуют в уравнениях общей теории относительности Эйнштейна, но реально во Вселенной их никто не наблюдал. Однако есть одно загадочное событие, которое некоторые ученые считают возможным проявлением белой дыры.</p>
+                <h3>Характеристики дыры</h3>
+               <ul>
+    <li><strong>Дата события:</strong> 14 июня 2006 года</li>
+    <li><strong>Длительность:</strong> 102 секунды</li>
+    <li><strong>Тип:</strong> Длинный гамма-всплеск (без сверхновой)</li>
+    <li><strong>Красное смещение:</strong> z = 0.125 (~4.6 млрд световых лет)</li>
+    <li><strong>Энергия:</strong> ~10⁵² эрг</li>
+    <li><strong>Статус:</strong> Гипотетическое проявление белой дыры</li>
+</ul>
+                
+                <button class="close-button">✖</button>
+            </div>
+        </div>
+
+
+        <div class="right-column1">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/GRB_060614_Widefield_%2849997136701%29.png/960px-GRB_060614_Widefield_%2849997136701%29.png" alt="Фотография белой дыры" class="star-image">
+
+
+            <button class="star-button" id="historyButton">История обнаружения</button>
+
+            <div class="popup" id="historyPopup">
+                <h3>История обнаружения дыры</h3>
+                <p style="font-size: 20px;">14 июня 2006 года спутник Swift зафиксировал мощный гамма-всплеск, получивший название GRB 060614. Он длился 102 секунды — это характерно для взрывов сверхновых. Но странность: в этом месте не обнаружили никакой сверхновой! Это разрушало стандартную классификацию гамма-всплесков. В 2011 году группа израильских астрофизиков во главе с Алоном Реттером предложила смелую гипотезу: это могло быть рождение белой дыры. Они назвали событие «Маленький взрыв» (Small Bang), проводя параллель с Большим взрывом, из которого возникла Вселенная. Прямых доказательств нет, но GRB 060614 остается одной из главных загадок современной астрофизики.</p>
+                <button class="close-button">✖</button>
+            </div>
+        </div>
+    </div>
+
+
+            </div>
+
+        </section>
+
+
+
+
+<section class="solar-system-section">
+    <h2 class="section-title">Солнечная система</h2>
+    
+    <div class="solar-system-container">
+        
+
+        <div class="orbit orbit-1"></div>
+        <div class="orbit orbit-2"></div>
+        <div class="orbit orbit-3"></div>
+        <div class="orbit orbit-4"></div>
+        <div class="orbit orbit-5"></div>
+        <div class="orbit orbit-6"></div>
+        <div class="orbit orbit-7"></div>
+        <div class="orbit orbit-8"></div>
+        
+      
+        <div class="planet sun" data-planet="sun">
+            <div class="planet-circle sun-circle"></div>
+            <span class="planet-label">Солнце</span>
+        </div>
+        
+     
+        <div class="planet mercury" data-planet="mercury">
+            <div class="planet-circle mercury-circle"></div>
+            <span class="planet-label">Меркурий</span>
+        </div>
+        
+        <div class="planet venus" data-planet="venus">
+            <div class="planet-circle venus-circle"></div>
+            <span class="planet-label">Венера</span>
+        </div>
+        
+        <div class="planet earth" data-planet="earth">
+            <div class="planet-circle earth-circle"></div>
+            <span class="planet-label">Земля</span>
+        </div>
+        
+        <div class="planet mars" data-planet="mars">
+            <div class="planet-circle mars-circle"></div>
+            <span class="planet-label">Марс</span>
+        </div>
+        
+        <div class="planet jupiter" data-planet="jupiter">
+            <div class="planet-circle jupiter-circle"></div>
+            <span class="planet-label">Юпитер</span>
+        </div>
+        
+        <div class="planet saturn" data-planet="saturn">
+            <div class="planet-circle saturn-circle"></div>
+            <div class="saturn-ring"></div>
+            <span class="planet-label">Сатурн</span>
+        </div>
+        
+        <div class="planet uranus" data-planet="uranus">
+            <div class="planet-circle uranus-circle"></div>
+            <span class="planet-label">Уран</span>
+        </div>
+        
+        <div class="planet neptune" data-planet="neptune">
+            <div class="planet-circle neptune-circle"></div>
+            <span class="planet-label">Нептун</span>
+        </div>
+        
+    </div>
+</section>
+
+
+<script src="script.js"></script>
+
+    </main>
+    <footer>
+        <p>Made by MeidinH</p>
+    </footer>
+    
+<button id="backToTop" class="back-to-top" aria-label="Наверх">↑</button>
+</body>
